@@ -1,11 +1,12 @@
 ﻿namespace HelloWorld
 {
-    internal class Program 
+    internal class program
     {
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("My C# Learning Journey Starts Today!");
+            Console.WriteLine("My C# Learning Journey Starts Today!!!");
         }
     }
+
 }
