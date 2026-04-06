@@ -23,6 +23,11 @@
             int primeCount = CountPrimes(100000);
             Console.WriteLine($"Total Prime Numbers from 0 to 100000 are : {primeCount}");
 
+            //3 . Fibonacci
+            Console.WriteLine("Counting the Fibonacci upto 50th term");
+            long fibResult = Fibonacci(50);
+            Console.WriteLine($"50th Fibonacci Number : {fibResult}");
+
 
         }
 
@@ -60,7 +65,7 @@
             return MatrixC;
         }
         
-        //Method to Count the Prime Numbers upto 100000
+        //2. Method to Count the Prime Numbers upto 100000
         static int CountPrimes(int limit)
         {
             int count = 0;
@@ -81,6 +86,20 @@
             }
             return count; 
         }
+        // 3. Method to Implement Fibonacci 
+        static long Fibonacci(int n)
+        {
+            if (n <= 1) return n;
+            long a = 0, b = 1;
+            for(int i=2; i<=n; i++)
+            {
+                long temp = a + b;
+                a = b;
+                b = temp;
+            }
+            return b;
+        }
+
 
 
     }
