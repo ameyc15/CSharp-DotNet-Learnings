@@ -1,4 +1,7 @@
-﻿namespace Day03_MainMethod
+﻿using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
+
+namespace Day03_MainMethod
 {
     //the class is internal so it can not be access outside of the dll
     internal class Program
@@ -12,8 +15,8 @@
             Console.WriteLine("======= Size of all the Value Types =======");
 
             Console.WriteLine("======== Size of char/bool ========");
-            Console.WriteLine($"Size of bool : {sizeof(bool)} byte");
-            Console.WriteLine($"Size of char : {sizeof(char)} byte");
+            Console.WriteLine($"Size of bool : {sizeof(bool)} byte"); // bool is 1 byte even if it only needs 1 bit memory (0 or 1) cpu address memory in Bytes;
+            Console.WriteLine($"Size of char : {sizeof(char)} byte"); // Char is 2 Bytes in c# unlike c++ Char is 1 byte beacause C# uses Unicode(UTF16)
 
             //Integers
             Console.WriteLine("======== Size of Integer =======");
@@ -26,8 +29,9 @@
             Console.WriteLine("======= Size of Floating Type Variables =======");
             Console.WriteLine($"Size of float : {sizeof(float)} bytes");
             Console.WriteLine($"Size of double : {sizeof(double)} bytes");
-            Console.WriteLine($"Size of Decimal :{sizeof(decimal)} bytes");
+            Console.WriteLine($"Size of Decimal :{sizeof(decimal)} bytes"); // Highest weight 16 Bytes used in finanacial calclulationns doesn't round off large numbers 
 
+                     
             
         }
     }
