@@ -31,7 +31,22 @@ namespace Day03_MainMethod
             Console.WriteLine($"Size of double : {sizeof(double)} bytes");
             Console.WriteLine($"Size of Decimal :{sizeof(decimal)} bytes"); // Highest weight 16 Bytes used in finanacial calclulationns doesn't round off large numbers 
 
-                     
+
+            int max = int.MaxValue;
+            int min = int.MinValue;
+            Console.WriteLine(max);
+            Console.WriteLine(min);
+
+            uint uMax = uint.MaxValue;
+            uint uMin = uint.MinValue;
+            Console.WriteLine(uMax);
+            Console.WriteLine(uMin);
+
+            double maxd = double.MaxValue;
+            double mind = double.MinValue;
+            Console.WriteLine(maxd);
+            Console.WriteLine(mind);
+
             
         }
     }
