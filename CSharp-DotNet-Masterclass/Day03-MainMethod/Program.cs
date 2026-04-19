@@ -9,12 +9,26 @@
         {
             Console.WriteLine("Hello World!");
 
-            Console.WriteLine("====== Size of all the Value Types (in Bytes) =====");
+            Console.WriteLine("======= Size of all the Value Types =======");
+
+            Console.WriteLine("======== Size of char/bool ========");
+            Console.WriteLine($"Size of bool : {sizeof(bool)} byte");
+            Console.WriteLine($"Size of char : {sizeof(char)} byte");
+
             //Integers
-            Console.WriteLine($"Size of Byte : {sizeof(byte)} byte");
+            Console.WriteLine("======== Size of Integer =======");
+            Console.WriteLine($"Size of Byte : {sizeof(byte)} byte"); 
             Console.WriteLine($"Size of Short : {sizeof(short)} bytes");
             Console.WriteLine($"Size of Int : {sizeof(int)} bytes");
             Console.WriteLine($"Size of Long : {sizeof(long)} bytes");
+
+            //floating point 
+            Console.WriteLine("======= Size of Floating Type Variables =======");
+            Console.WriteLine($"Size of float : {sizeof(float)} bytes");
+            Console.WriteLine($"Size of double : {sizeof(double)} bytes");
+            Console.WriteLine($"Size of Decimal :{sizeof(decimal)} bytes");
+
+            
         }
     }
 }
