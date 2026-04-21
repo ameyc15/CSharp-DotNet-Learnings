@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Day02_ReleaseVsDebugMode/Day02_ReleaseVsDebugMode.csproj" />
   <Project Path="Day03-MainMethod/Day03_MainMethod.csproj" />
+  <Project Path="Day04_TypeConversion_And_Arithmatic_Operator/Day04_TypeConversion_And_Arithmatic_Operator.csproj" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
