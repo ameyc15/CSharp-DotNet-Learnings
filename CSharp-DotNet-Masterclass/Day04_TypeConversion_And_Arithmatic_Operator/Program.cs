@@ -21,6 +21,47 @@
             int valuePiInt = (int)valuePi;
             Console.WriteLine("Variable Type Double valuePi : "+valuePi); // prints 3.143
             Console.WriteLine("Varibale Type Int valuePiInt : "+valuePiInt); // only pritns 3 => data loss after decimal because memory size
+
+            // there's another method for Explicit Type casting using Inbuilt Functions
+            double secondVar = 7.98;
+            Console.WriteLine(Convert.ToInt32(secondVar)); // but this will do roundoff to nearest integer which is 8
+
+            double thirdVar = 10.49;
+            Console.WriteLine(Convert.ToInt32(thirdVar)); // this will print 10
+
+            //ARITHMATIC OPERATOR
+            // Uninary Operator and Binary Operator
+            // Binary Operator
+            // sum, substract, multiply, division, mod, increment, decrement 
+            int sum, sub, mul, div, mod ;
+            sum = sub = mul = div = 0;
+            int firstNumber = 100;
+            int secondNumber = 5;
+
+            sum = firstNumber + secondNumber;
+            sub = firstNumber - secondNumber;
+            mul = firstNumber * secondNumber;
+            div = firstNumber / secondNumber;
+            mod = firstNumber % secondNumber;
+
+            Console.WriteLine(sum); // 105
+            Console.WriteLine(sub); // 95
+            Console.WriteLine(mul); // 500
+            Console.WriteLine(div); // 20
+            Console.WriteLine(mod); // 0
+            Console.WriteLine(firstNumber++); // first assignment then increment so 100
+            Console.WriteLine(++secondNumber); // frist increment then assignment 6
+
+            //practice question of pre post increment decrement
+            Console.WriteLine("=====================Pre Post Increment and Decrement");
+            int a = 100;
+            int b = 50;
+            a++;
+            --a;
+            --b;
+            ++b;
+            Console.WriteLine(a);  // 101
+            Console.WriteLine(b); //51
         }
         
     }
