@@ -49,7 +49,7 @@
             Console.WriteLine(mul); // 500
             Console.WriteLine(div); // 20
             Console.WriteLine(mod); // 0
-            Console.WriteLine(firstNumber++); // first assignment then increment so 100
+            Console.WriteLine(firstNumber++); // first value is send to Write method then its incremented but method got the old value so it prints old value
             Console.WriteLine(++secondNumber); // frist increment then assignment 6
 
             //practice question of pre post increment decrement
@@ -60,8 +60,11 @@
             --a;
             --b;
             ++b;
-            Console.WriteLine(a);  // 101
-            Console.WriteLine(b); //51
+            Console.WriteLine(a);  // 100
+            Console.WriteLine(b); // 50
+
+            // *****some famous interview questions are pedning here will update here****
+            // Swapping using third var and 2 ways without thirad var 
         }
         
     }
