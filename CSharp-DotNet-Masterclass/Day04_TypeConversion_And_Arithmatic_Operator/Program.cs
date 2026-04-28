@@ -64,6 +64,12 @@
             Console.WriteLine(b); // 50
 
             // *****some famous interview questions are pedning here will update here****
+
+            // 1. write a program to do sum of digits in integer 13523
+            // 14
+
+            // 2. write a prgram to do factorial of number 5 
+            // 5*4*3*2*1 = 120
             // Swapping using third var and 2 ways without thirad var 
         }
         
