@@ -7,15 +7,22 @@
             Console.WriteLine("Hello World");
 
             // write a program to calculate the area of circle based on given value of radius
+            double pi = Math.PI;
+            Console.WriteLine("Please enter the radius of circle : ");
 
-            Console.WriteLine("Enter the radius of circle ");
+            // string input = Console.ReadLine();
 
-            string input = Console.ReadLine();
-            double radiusOfCricle = Convert.ToDouble(input);
+            double radiusOfCircle;
 
-            double areaOfCircle = 3.14 * radiusOfCricle * radiusOfCricle;
+            while (!double.TryParse(Console.ReadLine(),out radiusOfCircle))
+            {
+                Console.WriteLine("Invalid Value for Radius. Please Enter Valid Numeric Value");
 
-            Console.WriteLine($"Area of Circle is : {areaOfCircle}");
+            }
+
+            double areaOfCircle = pi * radiusOfCircle * radiusOfCircle;
+
+            Console.WriteLine($"Area of Circle is : {areaOfCircle:F2}");
         }
     }
 }
