@@ -49,6 +49,52 @@
             {
                 Console.WriteLine("Person is of abnormal Height");
             }
+
+            // Write a C# program to find out largest number among three numbers, using "if".
+
+            int firstNumber, secondNumber, thirdNumber;
+           
+            
+            while(!int.TryParse(Console.ReadLine(),out firstNumber))
+            {
+                Console.WriteLine("Invalid Integer...Please Enter Valid Integer Number");
+            }
+            Console.WriteLine("Your Fisrt Number is " + firstNumber);
+            while (!int.TryParse(Console.ReadLine(), out secondNumber))
+            {
+                Console.WriteLine("Innvalid Integer.. Please Enter Second Valid Whole Number");
+            }
+            Console.WriteLine("Your Second Number is" + secondNumber);
+            while(!int.TryParse(Console.ReadLine(), out thirdNumber))
+            {
+                Console.WriteLine("Invalid Input... Please Enter the Third Valid Whole Number");
+            }
+            Console.WriteLine("Your Third Number is " + thirdNumber);
+
+            if (firstNumber > secondNumber)
+            {
+                if (firstNumber > thirdNumber)
+                {
+                    Console.WriteLine($"Largest Number is : {firstNumber}");
+                }
+                else
+                {
+                    Console.WriteLine($"Largest Number is : {thirdNumber}");
+                }
+            }
+            else
+            {
+                if(secondNumber > thirdNumber)
+                {
+                    Console.WriteLine($"Largest Number is : {secondNumber}");
+                }
+                else
+                {
+                    Console.WriteLine($"Largest Number is : {thirdNumber}");
+                }
+            }
+
+
         }
     }
 }
