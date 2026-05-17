@@ -53,9 +53,9 @@
             // Write a C# program to find out largest number among three numbers, using "if".
 
             int firstNumber, secondNumber, thirdNumber;
-           
-            
-            while(!int.TryParse(Console.ReadLine(),out firstNumber))
+
+
+            while (!int.TryParse(Console.ReadLine(), out firstNumber))
             {
                 Console.WriteLine("Invalid Integer...Please Enter Valid Integer Number");
             }
@@ -65,7 +65,7 @@
                 Console.WriteLine("Innvalid Integer.. Please Enter Second Valid Whole Number");
             }
             Console.WriteLine("Your Second Number is" + secondNumber);
-            while(!int.TryParse(Console.ReadLine(), out thirdNumber))
+            while (!int.TryParse(Console.ReadLine(), out thirdNumber))
             {
                 Console.WriteLine("Invalid Input... Please Enter the Third Valid Whole Number");
             }
@@ -84,7 +84,7 @@
             }
             else
             {
-                if(secondNumber > thirdNumber)
+                if (secondNumber > thirdNumber)
                 {
                     Console.WriteLine($"Largest Number is : {secondNumber}");
                 }
@@ -93,6 +93,54 @@
                     Console.WriteLine($"Largest Number is : {thirdNumber}");
                 }
             }
+
+            //Write a C# program to find out largest number among three numbers, using "if"
+            // This is more advanced solution compared to above one
+            int firstNum, secondNum, thirdNum, largest;
+            Console.WriteLine("Enter theree Numbers ");
+            while (!int.TryParse(Console.ReadLine(), out firstNum))
+            {
+                Console.WriteLine("Invalid Input...Enter Whole Number");
+            }
+            while (!int.TryParse(Console.ReadLine(), out secondNum))
+            {
+                Console.WriteLine("Invalid Input...Enter Whole Number");
+            }
+            while (!int.TryParse(Console.ReadLine(), out thirdNum))
+            {
+                Console.WriteLine("Invalid Input...Enter Whole Number");
+            }
+            Console.WriteLine("First Number is " + firstNum);
+            Console.WriteLine("Second Number is " + secondNum);
+            Console.WriteLine("Third Number is " + thirdNum);
+            if (firstNum >= secondNum && firstNum >= thirdNum)
+            {
+                largest = firstNum;
+            }
+            else if (secondNum >= firstNum && secondNum >= thirdNum)
+            {
+                largest = secondNum;
+            }
+            else
+            {
+                largest = thirdNum;
+            }
+            Console.WriteLine("Largest Nummber is :" + largest);
+
+            int[] numbers = new int[3];
+            Console.WriteLine("Enter Three Numbers");
+            for(int i=0; i < numbers.Length; i++)
+            {
+                Console.WriteLine($"Enter your {i + 1}st Number");
+                while(!int.TryParse(Console.ReadLine(),out numbers[i]))
+                {
+                    Console.WriteLine("Invalid Input... Please Enter Whole Number");
+                }
+             }
+            Console.WriteLine($"Your Numbers are : {string.Join(", ", numbers)}");
+            int largestN = numbers.Max();
+            Console.WriteLine("Largest Number is :" + largestN);
+
 
 
         }
