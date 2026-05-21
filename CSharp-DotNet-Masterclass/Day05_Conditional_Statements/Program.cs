@@ -5,8 +5,6 @@
         static void Main(string[] args)
         {
             {
-
-
                 Console.WriteLine("***********Program has Stared***********");
                 Console.WriteLine("Program to Calculate the circle of Radius");
                 AreaOfCircle();
@@ -187,8 +185,6 @@
                     int largestN = numbers.Max();
                     Console.WriteLine("Largest Number is :" + largestN);
                 }
-
-
             }
         }
     }
