@@ -41,57 +41,64 @@ namespace Day06_DoWhileAndForLoops
                 Console.WriteLine(d);
             }
 
-            string monthName = default;
+            string monthName;
             Console.WriteLine("Enter any month number");
             int result;
-            int monthNumber = Convert.ToInt32(Console.ReadLine());    
+            //int monthNumber = Convert.ToInt32(Console.ReadLine());    
             
+            if(int.TryParse(Console.ReadLine(), out int monthNumber))
+            { 
+                switch (monthNumber)
+                    {
+                        case 1:
+                            monthName = "January";
+                            break;
+                        case 2:
+                            monthName = "February";
+                            break;
+                        case 3:
+                            monthName = "March";
+                            break;
+                        case 4:
+                            monthName = "April";
+                            break;
+                        case 5:
+                            monthName = "May";
+                            break;
+                        case 6:
+                            monthName = "June";
+                            break;
+                        case 7:
+                            monthName = "July";
+                            break;
+                        case 8:
+                            monthName = "August";
+                            break;
+                        case 9:
+                            monthName = "September";
+                            break;
+                        case 10:
+                            monthName = "Octomber";
+                            break;
+                        case 11:
+                            monthName = "November";
+                            break;
+                        case 12:
+                            monthName = "December";
+                            break;
+                        default:
+                            monthName = "Invalid Input... Please Enter integer between 1 to 12";
+                            Console.WriteLine(monthName);
+                            break;              
 
-            switch (monthNumber)
+                      }
+                Console.WriteLine($"You Selected month is {monthName}");
+             }
+            else
             {
-                case 1:
-                    monthName = "January";
-                    break;
-                case 2:
-                    monthName = "February";
-                    break;
-                case 3:
-                    monthName = "March";
-                    break;
-                case 4:
-                    monthName = "April";
-                    break;
-                case 5:
-                    monthName = "May";
-                    break;
-                case 6:
-                    monthName = "June";
-                    break;
-                case 7:
-                    monthName = "July";
-                    break;
-                case 8:
-                    monthName = "August";
-                    break;
-                case 9:
-                    monthName = "September";
-                    break;
-                case 10:
-                    monthName = "Octomber";
-                    break;
-                case 11:
-                    monthName = "November";
-                    break;
-                case 12:
-                    monthName = "December";
-                    break;
-                default:
-                    Console.WriteLine("Invalid Input... Please Enter integer between 1 to 12");
-                    break;              
-
+                Console.WriteLine("Please Enter Valid Integer");
             }
-            Console.WriteLine(monthName);
-            
+
         }
     }
 }
