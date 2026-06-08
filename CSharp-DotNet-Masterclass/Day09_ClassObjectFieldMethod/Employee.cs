@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
 
-[assembly : InternalsVisibleTo("Day08_IntroToOOPS")]
+[assembly: InternalsVisibleTo("Day08_IntroToOOPS")]
 
 namespace Day09_ClassObjectFieldMethod
 {
