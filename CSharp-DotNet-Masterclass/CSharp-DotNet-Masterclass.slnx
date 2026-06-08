@@ -4,6 +4,6 @@
   <Project Path="Day04_TypeConversion_And_Arithmatic_Operator/Day04_TypeConversion_And_Arithmatic_Operator.csproj" />
   <Project Path="Day05_Conditional_Statements/Day05_Conditional_Statements.csproj" />
   <Project Path="Day06_DoWhileAndForLoops/Day06_DoWhileAndForLoops.csproj" Id="a919c8d1-1c47-4199-bf28-bc34ab1f1551" />
-  <Project Path="Day08_IntroToOOPS/Day07_IntroToOOPS.csproj" Id="b9636beb-3d0f-4afe-b161-d04f65f908eb" />
+  <Project Path="Day08_IntroToOOPS/Day08_IntroToOOPS.csproj" Id="b9636beb-3d0f-4afe-b161-d04f65f908eb" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
