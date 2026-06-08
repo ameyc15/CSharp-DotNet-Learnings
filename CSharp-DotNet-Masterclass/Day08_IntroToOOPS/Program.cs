@@ -1,4 +1,6 @@
-﻿namespace Day07_IntroToOOPS
+﻿using Day09_ClassObjectFieldMethod;
+
+namespace Day07_IntroToOOPS
 {
     public class Program
     {
@@ -26,6 +28,10 @@
             Console.WriteLine($"IsPayment Done from main method {paymemnt.isPaymentDone}");
             Console.WriteLine($"This is static property amount1 : {Payment.amount1}");
             
+            // Trying to access internal Employee Class from Day09 Project using Assembly:internalInvisibleTo("Day08")];
+            Employee employee = new Employee();
+            Console.WriteLine(employee.employeeName);
+            Console.WriteLine(employee.employeeAge);
 
         }
     }

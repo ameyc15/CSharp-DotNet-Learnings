@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Day09_ClassObjectFieldMethod\Day09_ClassObjectFieldMethod.csproj" />
-  </ItemGroup>
-
 </Project>
