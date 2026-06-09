@@ -30,6 +30,8 @@ namespace Day07_IntroToOOPS
             
             // Trying to access internal Employee Class from Day09 Project using Assembly:internalInvisibleTo("Day08")];
             Employee employee = new Employee();
+            employee.employeeName = "Amey B. Chaudhary";
+            employee.employeeAge = 30;
             Console.WriteLine(employee.employeeName);
             Console.WriteLine(employee.employeeAge);
 
