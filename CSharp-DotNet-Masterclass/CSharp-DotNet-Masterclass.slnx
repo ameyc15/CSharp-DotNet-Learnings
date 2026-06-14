@@ -6,5 +6,6 @@
   <Project Path="Day06_DoWhileAndForLoops/Day06_DoWhileAndForLoops.csproj" Id="a919c8d1-1c47-4199-bf28-bc34ab1f1551" />
   <Project Path="Day08_IntroToOOPS/Day08_IntroToOOPS.csproj" Id="b9636beb-3d0f-4afe-b161-d04f65f908eb" />
   <Project Path="Day09_ClassObjectFieldMethod/Day09_ClassObjectFieldMethod.csproj" Id="95e6d6aa-9141-4011-9685-bb5997bed52d" />
+  <Project Path="Day10_IntroToConstructor/Day10_IntroToConstructor.csproj" Id="859bec00-4fa1-48f2-bcf3-9c671756d800" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
