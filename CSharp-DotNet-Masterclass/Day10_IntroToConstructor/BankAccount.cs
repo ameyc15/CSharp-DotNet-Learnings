@@ -8,7 +8,7 @@ namespace Bank
 {
     public class BankAccount
     {
-        static double balance { get; set; }
+        public double balance { get; set; }
         public string bankName { get; set; }
 
         // Constructor :  Special Method with no return type but same name as class name
