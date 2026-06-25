@@ -8,7 +8,7 @@ namespace Bank
 {
     public class BankAccount
     {
-        public double balance { get; set; }
+        static double balance { get; set; }
         public string bankName { get; set; }
 
         // Constructor :  Special Method with no return type but same name as class name
@@ -23,12 +23,14 @@ namespace Bank
         {
             Console.WriteLine("Constructor with one parameter invoked");
             balance = amount;
+            Console.WriteLine("Balance is : " + balance);
         }
         public BankAccount(string bankname, double amount)
         {
             Console.WriteLine("Constructor with two Parameter invoked");
             bankName = bankname;
             balance = amount;
+            Console.WriteLine("Balance is : "+ balance + "\nBankName is : "+bankName);
         }
     }
 }
