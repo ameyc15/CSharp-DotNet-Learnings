@@ -2,14 +2,29 @@
 {
     internal class Program
     {
-        public static void CityMethod(string city = "Pune")
+        public static void CityMethod(double population ,string city = "Pune")
         {
             Console.WriteLine(city);
+            Console.WriteLine(population);
         }
+        public static int Sum(int x, int y)
+        {
+            return x + y;
+        }
+        static int Method(int x)
+        {
+            return x;
+            Console.WriteLine();
+        }
+         
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            CityMethod();
-            CityMethod("Mumbai");        }
+            CityMethod(100000);
+            CityMethod(200000,"Mumbai"); 
+
+            int output=Sum(100, 200);
+            Console.WriteLine(output);
+        }
     }
 }
