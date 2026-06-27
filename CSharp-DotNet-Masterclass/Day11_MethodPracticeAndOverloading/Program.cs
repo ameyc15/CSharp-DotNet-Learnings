@@ -82,6 +82,30 @@ namespace Day11_MethodPracticeAndOverloading
             }
             string companyName = "newgen";
             Console.WriteLine(companyName.ToUpper());
+
+            // string comparison using in built method ComparedTo
+            string stringOne = "AMEY";
+            string stringTwo = "amey";
+
+            Console.WriteLine(stringOne.CompareTo(stringTwo));
+
+            int x = stringOne.ToLower().CompareTo(stringTwo);
+            if(x == 0)
+            {
+                Console.WriteLine("Both Strings are equal");
+            }
+            else
+            {
+                Console.WriteLine("Strings are not equal");
+            }
+            // Repalce method for string
+            string test = "Replace";
+            Console.WriteLine(stringOne.Replace("EY",test)); // AMReplace this should be the output
+
+            // name.Length
+            // stringOne == stringTwo;
+            // stringOne.Equals(stringTwo);
+            // stringOne.ComparedTo(stringTwo);
         }
     }
 }
