@@ -8,5 +8,6 @@
   <Project Path="Day09_ClassObjectFieldMethod/Day09_ClassObjectFieldMethod.csproj" Id="95e6d6aa-9141-4011-9685-bb5997bed52d" />
   <Project Path="Day10_IntroToConstructor/Day10_IntroToConstructor.csproj" Id="859bec00-4fa1-48f2-bcf3-9c671756d800" />
   <Project Path="Day11_MethodPracticeAndOverloading/Day11_MethodPracticeAndOverloading.csproj" Id="b20cffe9-e316-4eed-94a5-239fc87ac68f" />
+  <Project Path="Day12_Arrays/Day12_Arrays.csproj" Id="c4a14347-8c45-416b-b659-476e4489f263" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
