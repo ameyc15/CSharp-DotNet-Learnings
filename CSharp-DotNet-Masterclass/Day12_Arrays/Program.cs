@@ -17,6 +17,24 @@
                     maxNumber = numbers[i];
             }
             Console.WriteLine(maxNumber);
+
+
+            // alternative1:method rather taking absolute MinValue beacuse it doesn't consider the array contains only positive values
+            int[] numbersArr = new int[10] {23,67,12,34,65,78,1000,9,12,1};
+            int maxNum = numbersArr[0];
+            for (int i=1; i<numbersArr.Length; i++)
+            {
+                if (numbersArr[i] > maxNum)
+                {
+                    maxNum = numbersArr[i];
+                }
+            }
+            Console.WriteLine(maxNum);
+
+            // alternative2:Production Ready using LINQ
+            int[] numbersArr1 = new int[10] { 52, 47, 7, 21, 69, 23, 33, 10, 999, 4798 };
+            int maxNum1 = numbersArr1.Max();
+            Console.WriteLine(maxNum1);
         }
     }
 }
