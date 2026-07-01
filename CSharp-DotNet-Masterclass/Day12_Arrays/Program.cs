@@ -7,7 +7,7 @@
             int[] numbers = new int[5] { 1, 2, 3, 4, 5 };
             Console.WriteLine(numbers[0]);
 
-            // Find the maximum number in the array
+            // QUESTION: 1 Find the maximum number in the array
 
             int maxNumber = int.MinValue;
             Console.WriteLine(maxNumber);
@@ -35,6 +35,17 @@
             int[] numbersArr1 = new int[10] { 52, 47, 7, 21, 69, 23, 33, 10, 999, 4798 };
             int maxNum1 = numbersArr1.Max();
             Console.WriteLine(maxNum1);
+
+            // QUESTION 2 : Count the Even Numbers in Array
+            int counter = 0;
+            for(int i=0; i<numbersArr1.Length; i++)
+            {
+                if (numbersArr1[i] % 2 ==0)
+                    counter++;
+            }
+            Console.Write(counter);
+
+            // QUESTION 3 : Find The Sum of All Numbers in Array
         }
     }
 }
