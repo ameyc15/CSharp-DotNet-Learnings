@@ -43,9 +43,16 @@
                 if (numbersArr1[i] % 2 ==0)
                     counter++;
             }
-            Console.Write(counter);
+            Console.WriteLine(counter);
 
             // QUESTION 3 : Find The Sum of All Numbers in Array
+            int sum = 0;
+            for (int i=0;i<numbersArr1.Length; i++)
+            {
+                sum = sum+ numbersArr1[i];
+            }
+            Console.WriteLine(sum);
+
         }
     }
 }
