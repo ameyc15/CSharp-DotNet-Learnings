@@ -53,6 +53,24 @@
             }
             Console.WriteLine(sum);
 
+            // Question 4 : Find the missing number in array
+            // Logic used : sum of n natural numbers = n*(n+1)/2 
+
+            int[] givenArray = new int[5] {2,1,0,4,3};
+            int n = givenArray.Length;
+            int sumOfSerial = n * (n + 1) / 2;
+            int actualSum = 0;
+            for(int i=0; i<n; i++)
+            {
+                actualSum += givenArray[i];
+            }
+            Console.WriteLine(Math.Abs(actualSum-sumOfSerial));
+
+            // Question 5 : Find the Duplicate number in array
+
+
+            // Partial Class and Partial method
+
         }
     }
 }
