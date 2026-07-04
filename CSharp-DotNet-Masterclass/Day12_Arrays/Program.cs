@@ -67,6 +67,22 @@
             Console.WriteLine(Math.Abs(actualSum-sumOfSerial));
 
             // Question 5 : Find the Duplicate number in array
+            int[] dupArray = new int[8] { 5, 3, 8, 3, 1, 5, 9, 8 };
+            Console.WriteLine("Duplicate found : ");
+            for(int i=0; i< dupArray.Length; i++)
+            {
+                for(int j=i+1;  j<dupArray.Length; j++)
+                {
+                    if(dupArray[j] == dupArray[i])
+                    {
+                        Console.WriteLine(dupArray[i]);
+                    }
+                }
+            }
+
+
+
+            // Question 6 : Find the non Duplicate number in array
 
 
             // Partial Class and Partial method
