@@ -1,4 +1,7 @@
-﻿namespace Day12_Arrays_Static_PartialClass
+﻿using System.IO;
+using System.Runtime.Intrinsics.X86;
+
+namespace Day12_Arrays_Static_PartialClass
 {
     internal class Program
     {
@@ -86,7 +89,17 @@
 
 
             // Partial Class and Partial method
+            //1.All parts must use the keyword → partial
+            //2.All parts must have same class name
+            //3. All parts must be in same namespace
+            //4. All parts must be in same project
+            //5. At compile time → merged into ONE class automatically
 
+            Employee employee = new Employee();
+            employee.name = "Kelvin";
+            employee.age = 32;
+            employee.displayEmplpoyee();
+            employee.displayAge();
         }
     }
 }
