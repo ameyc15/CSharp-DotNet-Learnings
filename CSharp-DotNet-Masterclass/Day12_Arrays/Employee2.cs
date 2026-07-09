@@ -13,5 +13,13 @@ namespace Day12_Arrays_Static_PartialClass
         {
             Console.WriteLine("Age of employee is : " + age);
         }
+
+        //  partial method 
+        public partial void displayEmployee() 
+        {
+            Console.WriteLine("Name of employee is  : " + name);
+        }
+
     }
+
 }

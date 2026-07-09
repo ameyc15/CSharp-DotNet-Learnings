@@ -9,10 +9,11 @@ namespace Day12_Arrays_Static_PartialClass
     internal partial class Employee
     {
         public string name;
-       
-        public void displayEmplpoyee()
-        {
-            Console.WriteLine("Name of employee is : " + name);
-        }
+
+        //public void displayEmplpoyee()
+        //{
+        //    Console.WriteLine("Name of employee is : " + name);
+        //}
+        public partial void displayEmployee();   
     }
 }

@@ -98,8 +98,11 @@ namespace Day12_Arrays_Static_PartialClass
             Employee employee = new Employee();
             employee.name = "Kelvin";
             employee.age = 32;
-            employee.displayEmplpoyee();
+            employee.displayEmployee();
             employee.displayAge();
+
+            //static keyword
+            // used in field. method, class , constructor f     +
         }
     }
 }
