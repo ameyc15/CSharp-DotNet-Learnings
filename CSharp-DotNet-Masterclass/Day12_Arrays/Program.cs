@@ -122,6 +122,25 @@ namespace Day12_Arrays_Static_PartialClass
             Console.WriteLine(MathHelper.IsEven(4));
             Console.WriteLine(MathHelper.FindMax([2,3,4,5,6,7,8]));
             Console.WriteLine(MathHelper.CircleArea(10));
+
+
+            //Database Config -- Static Constructor 
+            Console.WriteLine();
+            Console.WriteLine("DataBaseConfig Class Starts ");
+
+            // First Time Creating Class Object so Static Constructor will Fire Only ONCE
+            DatabaseConfig db1 = new DatabaseConfig("SelectAllEmployee");
+            Console.WriteLine();
+
+            // Second Time Object is Created - Static Constructor does NOT run again 
+            DatabaseConfig db2 = new DatabaseConfig("InsertEmployee");
+            Console.WriteLine();
+
+            //Third Object -
+            DatabaseConfig db3 = new DatabaseConfig("UpdateSalary");
+            Console.WriteLine();
+
+            db1.DisplayConfig();
         }
     }
 }
