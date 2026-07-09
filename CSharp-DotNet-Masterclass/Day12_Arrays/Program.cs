@@ -102,7 +102,19 @@ namespace Day12_Arrays_Static_PartialClass
             employee.displayAge();
 
             //static keyword
-            // used in field. method, class , constructor f     +
+            // used in field. method, class , constructor
+
+            BankAccount acc1 = new BankAccount("Rahul", 50000);
+            acc1.DisplayInfo();
+
+            BankAccount acc2 = new BankAccount("Padamsinh", 250000);
+            acc2.DisplayInfo();
+
+            BankAccount acc3 = new BankAccount("Amey", 80000);
+            acc3.DisplayInfo();           
+
+            // Accessing the static field directly via class name and NOT VIA THE OBJECT
+            Console.WriteLine($"Total Account via Class : {BankAccount.TotalAccount}");
         }
     }
 }
