@@ -115,6 +115,13 @@ namespace Day12_Arrays_Static_PartialClass
 
             // Accessing the static field directly via class name and NOT VIA THE OBJECT
             Console.WriteLine($"Total Account via Class : {BankAccount.TotalAccount}");
+
+            // stataic Method MathHelper
+            Console.WriteLine(MathHelper.Add(20,30));
+            Console.WriteLine(MathHelper.Multiply(2,3));
+            Console.WriteLine(MathHelper.IsEven(4));
+            Console.WriteLine(MathHelper.FindMax([2,3,4,5,6,7,8]));
+            Console.WriteLine(MathHelper.CircleArea(10));
         }
     }
 }
