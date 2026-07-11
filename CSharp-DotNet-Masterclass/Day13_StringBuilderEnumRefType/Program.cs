@@ -22,7 +22,7 @@
             string s1 = new string( chars );
             Console.WriteLine(s1);
 
-            // string builder 
+            // string builder ..
 
 
         }
