@@ -8,8 +8,8 @@ namespace Day13_StringBuilderEnumRefType
 {
     internal class Employee
     {
-        public int salary;
-        public string name = string.Empty;
+        public int salary = 100;
+        public string name = "Dummy Name";
 
         public Employee()
         {

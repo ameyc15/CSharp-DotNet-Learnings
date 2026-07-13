@@ -4,15 +4,18 @@
     {
         static void Main(string[] args)
         {
-            int salary = 100;
+            
             Employee e1 = new Employee();
             e1.Display();
-            Console.WriteLine($"value of the value type salary is : {salary}");
+            e1.salary = 200;
+            e1.name = "real name";
+            e1.Display();
+            //Console.WriteLine($"value of the value type salary is : {salary}");
 
            
-            Update(e1, salary);
+            //Update(e1, salary);
             Console.WriteLine($"updated data for reference type name {e1.name} and salary is {e1.salary}");
-            Console.WriteLine($"value of the value type salary is : {salary}");
+           // Console.WriteLine($"value of the value type salary is : {salary}");
 
             
 
@@ -28,8 +31,8 @@
         }
         public static void Update(Employee e2, int salary)
         {
-            e2.name = "Real Name";
-            e2.salary = 2000;
+            e2.name = "Real Name inside static method";
+            e2.salary = 100000;
             
         }
     }
