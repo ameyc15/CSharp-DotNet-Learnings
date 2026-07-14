@@ -14,7 +14,7 @@ namespace Day13_StringBuilderEnumRefType
             e1.Display();
             //Console.WriteLine($"value of the value type salary is : {salary}");
 
-           
+
             Update(e1, salary);
             Console.WriteLine($"updated data for reference type name {e1.name} and salary is {e1.salary}");
             Console.WriteLine($"value of the value type salary is : {salary}");
@@ -26,7 +26,7 @@ namespace Day13_StringBuilderEnumRefType
 
 
             // how to create a string using charcter array
-            char[] chars = {'A','M','E','Y','B','C'};
+            char[] chars = { 'A', 'M', 'E', 'Y', 'B', 'C' };
             string str = new string(chars);
             Console.WriteLine(str);
 
@@ -42,7 +42,7 @@ namespace Day13_StringBuilderEnumRefType
             StringBuilder sb2 = new StringBuilder(100);
 
             // with some defualt value
-            StringBuilder sb1 = new StringBuilder("Hello There",25);
+            StringBuilder sb1 = new StringBuilder("Hello There", 25);
             Console.WriteLine(sb1.ToString());
             sb1.Append("Amey Chaudhhary");
             Console.WriteLine(sb1);
@@ -70,7 +70,7 @@ namespace Day13_StringBuilderEnumRefType
 
             // value type int salary
             salary = 1246;
-            
+
         }
     }
 }
