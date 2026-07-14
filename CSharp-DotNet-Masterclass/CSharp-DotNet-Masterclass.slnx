@@ -10,5 +10,6 @@
   <Project Path="Day11_MethodPracticeAndOverloading/Day11_MethodPracticeAndOverloading.csproj" Id="b20cffe9-e316-4eed-94a5-239fc87ac68f" />
   <Project Path="Day12_Arrays/Day12_Arrays_Static_PartialClass.csproj" Id="c4a14347-8c45-416b-b659-476e4489f263" />
   <Project Path="Day13_StringBuilderEnumRefType/Day13_StringBuilderEnumRefType.csproj" Id="55226189-7a8d-4ff3-9dcd-d1693b2fa760" />
+  <Project Path="Day14_JaggedMultiDimArrayInterfaces/Day14_JaggedMultiDimArrayInterfaces.csproj" Id="4bf47f53-34ce-419c-9ffa-eb46847bed9b" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
