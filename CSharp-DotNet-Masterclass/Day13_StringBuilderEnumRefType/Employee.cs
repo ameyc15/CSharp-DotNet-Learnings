@@ -10,6 +10,7 @@ namespace Day13_StringBuilderEnumRefType
     {
         public int salary = 100;
         public string name = "Dummy Name";
+        public Gender gender;
 
         public Employee()
         {
