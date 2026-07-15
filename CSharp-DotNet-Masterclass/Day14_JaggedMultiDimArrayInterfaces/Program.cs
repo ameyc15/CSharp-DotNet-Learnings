@@ -70,11 +70,19 @@
             {
                 new int[3]{1,2,5},
                 new int[4]{3,2,1,0}
-            }; 
+            };
 
 
             // var dynamic null
             // var is anonymous type at run time it will be 
+
+            //Interface
+            //  FileInfo => IFileInfo
+            // it should  have two  methods ReadFile and WriteFile (string text)
+            FileInfo f1 = new FileInfo();
+            f1.ReadFile();
+            f1.WriteFile("Sample");
+
         }
     }
 }
