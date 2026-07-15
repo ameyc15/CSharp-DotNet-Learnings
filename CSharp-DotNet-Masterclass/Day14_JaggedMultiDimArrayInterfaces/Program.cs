@@ -76,12 +76,40 @@
             // var dynamic null
             // var is anonymous type at run time it will be 
 
-            //Interface
+            //Interface Example 1
             //  FileInfo => IFileInfo
             // it should  have two  methods ReadFile and WriteFile (string text)
             FileInfo f1 = new FileInfo();
             f1.ReadFile();
             f1.WriteFile("Sample");
+
+            // Interface Example Two
+            // I want IPayment interface which is implemented by two classes CashPayment and CreditCardPayment
+            // First Approach
+            int transcationAmount = 199;
+            CashPayment cashPayment = new CashPayment();
+            CreditCardPayment creditCardPayment = new CreditCardPayment();
+            if (transcationAmount > 200)
+            {
+                creditCardPayment.Pay();
+            }
+            else
+            {
+                cashPayment.Pay();
+            }
+
+            // Second Apporach
+            IPayment payment = null;
+            if(transcationAmount > 200)
+            {
+                payment = new CreditCardPayment();
+                 
+            }
+            else
+            {
+                payment = new CashPayment();
+            }
+            payment.Pay();
 
         }
     }
