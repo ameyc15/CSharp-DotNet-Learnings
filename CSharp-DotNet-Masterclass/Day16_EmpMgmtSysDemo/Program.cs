@@ -16,6 +16,20 @@ namespace Day16_EmpMgmtSysDemo
             Payment payment = new Payment(); //
             payment.ProcessPayment(100); // method with only one param is invoked 
             payment.ProcessPayment(999, "SBI");
+
+            // Run Time Polymorphism ==> Overriding
+            Animal[] animals = new Animal[]
+            {
+                new Dog("Bruno"),
+                new Bird("Tweeti")
+            };
+            foreach(Animal animal in animals) 
+            {
+                animal.MakeSound();
+                animal.Move();
+                Console.WriteLine();
+            }
+
         }
     }
 }
