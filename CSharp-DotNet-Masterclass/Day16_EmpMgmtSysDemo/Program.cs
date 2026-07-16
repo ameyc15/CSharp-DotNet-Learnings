@@ -30,6 +30,11 @@ namespace Day16_EmpMgmtSysDemo
                 Console.WriteLine();
             }
 
+            // Abstraction
+            int CTC = 200000;
+            Tax tax = new Tax();
+            Console.WriteLine($"Tax Liability for {CTC} will be {tax.CalculateTax(CTC)}");
+
         }
     }
 }

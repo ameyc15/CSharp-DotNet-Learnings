@@ -13,5 +13,7 @@
   <Project Path="Day14_JaggedMultiDimArrayInterfaces/Day14_JaggedMultiDimArrayInterfaces.csproj" Id="4bf47f53-34ce-419c-9ffa-eb46847bed9b" />
   <Project Path="Day15_OOPSPartOne/Day15_OOPSPartOne.csproj" Id="dbb115d0-79a2-48b1-aaf2-64a994689b53" />
   <Project Path="Day16_EmpMgmtSysDemo/Day16_EmpMgmtSysDemo.csproj" Id="f9cfd3bc-ef94-4385-a12b-4733c2a23a38" />
+  <Project Path="Day17_ExceptionHandlingDictionary/Day17_ExceptionHandlingDictionary.csproj" Id="54ab7e4f-18bc-4381-b727-6611637455c4" />
+  <Project Path="Day18_Dictionary/Day18_Dictionary.csproj" Id="af382019-1be8-479d-a989-2f24f7bdf2aa" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
