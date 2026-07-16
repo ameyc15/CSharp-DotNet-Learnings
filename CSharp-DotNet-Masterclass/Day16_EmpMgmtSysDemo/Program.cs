@@ -15,7 +15,7 @@ namespace Day16_EmpMgmtSysDemo
             // Compile Time Polymorphism ==> Overloading
             Payment payment = new Payment(); //
             payment.ProcessPayment(100); // method with only one param is invoked 
-            //payment.ProcessPayment(999, "SBI");
+            payment.ProcessPayment(999, "SBI");
         }
     }
 }
