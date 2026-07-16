@@ -12,8 +12,6 @@
   <Project Path="Day13_StringBuilderEnumRefType/Day13_StringBuilderEnumRefType.csproj" Id="55226189-7a8d-4ff3-9dcd-d1693b2fa760" />
   <Project Path="Day14_JaggedMultiDimArrayInterfaces/Day14_JaggedMultiDimArrayInterfaces.csproj" Id="4bf47f53-34ce-419c-9ffa-eb46847bed9b" />
   <Project Path="Day15_OOPSPartOne/Day15_OOPSPartOne.csproj" Id="dbb115d0-79a2-48b1-aaf2-64a994689b53" />
-  <Project Path="Day16_DepartmentEMS/Day16_DepartmentEMS.csproj" Id="e250dbf1-0ae4-4649-8806-427b93b1b476" />
-  <Project Path="Day16_Employee/Day16_Employee.csproj" Id="ae25f9cb-2269-4031-b9fb-78c458bcb342" />
   <Project Path="Day16_EmpMgmtSysDemo/Day16_EmpMgmtSysDemo.csproj" Id="f9cfd3bc-ef94-4385-a12b-4733c2a23a38" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
