@@ -48,8 +48,33 @@
             {
                 Console.WriteLine("Key : " + pair.Key + "   Value : " + pair.Value);
             }
-            
-            
+
+            // Interview Question
+            // Count the Number of character present in the string "MISISSIPI"
+            //string str = "MISISSIPI";
+            //Console.WriteLine("The Given String is : " +str);
+            // Lets take input from console
+
+            string str = Console.ReadLine();
+
+            Dictionary<char, int> countOfChar = new Dictionary<char, int>();
+            foreach(char c in str)
+            {
+                if (countOfChar.ContainsKey(c))
+                {
+                    countOfChar[c]++;
+                }
+                else
+                {
+                    countOfChar[c] = 1;
+                }
+            }
+
+            foreach(var pair in countOfChar)
+            {
+                Console.WriteLine($"{pair.Key}  :   {pair.Value}");
+            }
+
         }
     }
 }
