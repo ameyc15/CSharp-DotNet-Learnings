@@ -94,6 +94,34 @@
             {
                 Console.WriteLine(c);
             }
+            // using LINQ
+            first.Union(second).ToList();
+            // 
+            first.Concat(second).Distinct().ToList();
+
+            // Interview Question 3
+            // Create a list of employee with Id, Salary, Name
+            // 1.  Find the Lowest Salary
+            // 2. Find the Highest salary
+            // 3. Find the with second Highest salary
+            //Logic : First create employee class having threee fields W
+
+            List<Employee> employees = new List<Employee>()
+            {
+                new Employee{Id=1,Salary=10000,Name = "Vinit"},
+                new Employee{Id=2, Salary = 15000, Name = "Akash"},
+                new Employee{Id=3, Salary=20000, Name = "Shreya"},
+                new Employee{Id =4, Salary = 30000, Name = "Shruti"},
+                new Employee{Id = 5, Salary = 30000, Name = "Amey"}
+
+            };
+            foreach(var emp in employees)
+            {
+                Console.WriteLine(emp.Id +" "+ emp.Name+" "+ emp.Salary);
+            }
+
+            
+
 
         }
     }
