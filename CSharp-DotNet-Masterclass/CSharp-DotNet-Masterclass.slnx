@@ -16,5 +16,6 @@
   <Project Path="Day17_ExceptionHandlingDictionary/Day17_ExceptionHandlingDictionary.csproj" Id="54ab7e4f-18bc-4381-b727-6611637455c4" />
   <Project Path="Day18_Dictionary/Day18_Dictionary.csproj" Id="af382019-1be8-479d-a989-2f24f7bdf2aa" />
   <Project Path="Day19_List/Day19_List.csproj" Id="ee2a7fa3-631a-459a-9f10-7ab0df24e31d" />
+  <Project Path="Day20_StackQueueHashtable/Day20_StackQueueHashtable.csproj" Id="7148ab6f-9c12-4e5b-a9f6-15a1652b8679" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
