@@ -111,8 +111,8 @@
                 new Employee{Id=1,Salary=10000,Name = "Vinit"},
                 new Employee{Id=2, Salary = 15000, Name = "Akash"},
                 new Employee{Id=3, Salary=20000, Name = "Shreya"},
-                new Employee{Id =4, Salary = 30000, Name = "Shruti"},
-                new Employee{Id = 5, Salary = 30000, Name = "Amey"}
+                new Employee{Id=4, Salary = 30000, Name = "Shruti"},
+                new Employee{Id=5, Salary = 30000, Name = "Amey"}
 
             };
             foreach(var emp in employees)
