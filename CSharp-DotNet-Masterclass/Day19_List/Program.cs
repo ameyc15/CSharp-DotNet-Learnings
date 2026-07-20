@@ -1,4 +1,6 @@
-﻿namespace Day19_List
+﻿using System;
+
+namespace Day19_List
 {
     internal class Program
     {
@@ -108,19 +110,38 @@
 
             List<Employee> employees = new List<Employee>()
             {
-                new Employee{Id=1,Salary=10000,Name = "Vinit"},
-                new Employee{Id=2, Salary = 15000, Name = "Akash"},
-                new Employee{Id=3, Salary=20000, Name = "Shreya"},
-                new Employee{Id=4, Salary = 30000, Name = "Shruti"},
-                new Employee{Id=5, Salary = 30000, Name = "Amey"}
+                new Employee{Id=1,Salary=30000,Name = "Vinit"},
+                new Employee{Id=2, Salary = 25000, Name = "Akash"},
+                new Employee{Id=3, Salary=10000, Name = "Shreya"},
+                new Employee{Id=4, Salary = 80000, Name = "Shruti"},
+                new Employee{Id=5, Salary = 50000, Name = "Amey"}
 
             };
             foreach(var emp in employees)
             {
                 Console.WriteLine(emp.Id +" "+ emp.Name+" "+ emp.Salary);
             }
+            // Here I would like to use sorting : BUBBLE SORT
+            for(int i =0; i<employees.Count-1; i++)
+            {
+                for(int j=0; j< employees.Count-i-1; j++)
+                {
+                    if (employees[j].Salary > employees[j + 1].Salary)
+                    {
+                        Employee temp = employees[j];
+                        employees[j] = employees[j + 1];
+                        employees[j+1] = temp;
+                    }
+                }
+            }
+            foreach(var emp in employees)
+            {
+                Console.WriteLine(emp.Id + " " + emp.Name + "  " + emp.Salary);
+            }
 
-            
+            Console.WriteLine($"Lowest Salary is : {employees[0].Salary}");
+            Console.WriteLine($"Highest Salary is :{employees[employees.Count-1].Salary}");
+            Console.WriteLine($"Second Highest Salary is : {employees[employees.Count-2].Salary}");
 
 
         }
