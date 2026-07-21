@@ -142,6 +142,7 @@ namespace Day19_List
             Console.WriteLine($"Lowest Salary is : {employees[0].Salary}");
             Console.WriteLine($"Highest Salary is :{employees[employees.Count-1].Salary}");
             Console.WriteLine($"Second Highest Salary is : {employees[employees.Count-2].Salary}");
+            // commit
 
 
         }
