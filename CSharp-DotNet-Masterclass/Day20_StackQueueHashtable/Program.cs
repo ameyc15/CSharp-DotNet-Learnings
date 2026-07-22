@@ -96,7 +96,10 @@ namespace Day20_StackQueueHashtable
             {
                 Console.WriteLine(item);
             }
-
+            // without for loop
+            Console.WriteLine("Odd : " + string.Join(", ",((ArrayList)ht["odd"]).ToArray()));
+            Console.WriteLine("Odd : " + string.Join(", ",((ArrayList)ht["even"]).ToArray()));
+            
 
         }
     }
