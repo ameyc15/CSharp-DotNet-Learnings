@@ -17,5 +17,6 @@
   <Project Path="Day18_Dictionary/Day18_Dictionary.csproj" Id="af382019-1be8-479d-a989-2f24f7bdf2aa" />
   <Project Path="Day19_List/Day19_List.csproj" Id="ee2a7fa3-631a-459a-9f10-7ab0df24e31d" />
   <Project Path="Day20_StackQueueHashtable/Day20_StackQueueHashtable.csproj" Id="7148ab6f-9c12-4e5b-a9f6-15a1652b8679" />
+  <Project Path="Day21_AbstractClassSOLIDPrinicples/Day21_AbstractClassSOLIDPrinicples.csproj" Id="93c75d80-2a6d-4f6a-91fc-60df1134d2ad" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
