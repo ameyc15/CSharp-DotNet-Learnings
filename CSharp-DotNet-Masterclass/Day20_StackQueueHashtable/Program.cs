@@ -1,4 +1,6 @@
-﻿namespace Day20_StackQueueHashtable
+﻿using System.IO.Compression;
+
+namespace Day20_StackQueueHashtable
 {
     public class Program
     {
@@ -24,7 +26,24 @@
             Console.WriteLine(y);
 
             //Application forward and backward 
-            //Undo and  Redo 
+            BrowserHistory browser = new BrowserHistory("google.com");
+            Console.WriteLine(browser.GoBack()); // nothing in stack so by default google.com
+            Console.WriteLine(browser.GoForward()); // same google.com
+
+            browser.Visit("page1.com");
+            browser.Visit("page2.com");
+            browser.Visit("page3.com");
+            browser.Visit("page4.com");
+
+            Console.WriteLine(browser.GoBack()); // output : page 3
+            Console.WriteLine(browser.GoBack()); // output : page 2
+            Console.WriteLine(browser.GoBack()); // output : page 1
+            Console.WriteLine(browser.GoBack()); // output : google.com
+            Console.WriteLine(browser.GoForward()); // output : page 1
+            Console.WriteLine(browser.GoForward()); // output : page 2
+            Console.WriteLine(browser.GoForward()); // output : page 3
+            Console.WriteLine(browser.GoForward()); // output : page 4
+
 
 
         }
