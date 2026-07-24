@@ -17,6 +17,19 @@
             Console.WriteLine(rectangle.CalculateArea());
 
             //Liskov Substitution : Derived Classes should be able to substitue the Base class 
+            // Bird class 
+            Bird b = new Bird();
+
+            // but 
+            // Bird b = new Ostrich(); invalid because it chaning the behaviour of the base class
+            // we can solve that using IFlyable interface 
+            IFlyable flyable;
+            flyable = new Bird();
+            flyable.Fly();
+
+            flyable = new Ostrich();
+            flyable.Fly();
+
         }
     }
 }
