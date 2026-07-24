@@ -8,7 +8,7 @@
             // S - Single Responsibility - Each class should have single responsibility
             // O = Open Closed - Open for Extension CLosed for Modification using abstraction
             // L - Liskov Substitution
-            // I - Interface Prinnicple
+            // I - Interface Segregation
             // D - Dependency Inversion
             Circle circle = new Circle();
             Console.WriteLine(circle.CalculateArea());
@@ -29,6 +29,10 @@
 
             flyable = new Ostrich();
             flyable.Fly();
+
+            // Interface Segregation
+            // Dependecny Inversion:
+            // High Level Module Can not be dependent on Low level Module
 
         }
     }
