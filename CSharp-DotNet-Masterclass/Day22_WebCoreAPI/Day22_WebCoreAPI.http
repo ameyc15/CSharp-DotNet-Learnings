@@ -1,0 +1,6 @@
+@Day22_WebCoreAPI_HostAddress = http://localhost:5296
+
+GET {{Day22_WebCoreAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
