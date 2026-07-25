@@ -19,5 +19,6 @@
   <Project Path="Day20_StackQueueHashtable/Day20_StackQueueHashtable.csproj" Id="7148ab6f-9c12-4e5b-a9f6-15a1652b8679" />
   <Project Path="Day21_AbstractClassSOLIDPrinicples/Day21_AbstractClassSOLIDPrinicples.csproj" Id="93c75d80-2a6d-4f6a-91fc-60df1134d2ad" />
   <Project Path="Day22_WebCoreAPI/Day22_WebCoreAPI.csproj" Id="b5d66c86-b410-4127-8a78-8eceac641b32" />
+  <Project Path="Day23_WebAPIFromBodyQueryHeaderDiff/Day23_WebAPIFromBodyQueryHeaderDiff.csproj" Id="4215d1b8-7ef7-4889-9a1e-8a7eb2a7fddf" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
