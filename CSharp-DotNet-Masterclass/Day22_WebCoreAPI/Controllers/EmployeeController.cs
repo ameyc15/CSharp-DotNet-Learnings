@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Day22_WebCoreAPI.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Day22_WebCoreAPI.Controllers
@@ -7,9 +8,9 @@ namespace Day22_WebCoreAPI.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        public string EmployeeName = "Amey Chaudhary";
+        public EmployeeService employeeService = new EmployeeService();
 
-        public string EmmployeeCity = "Pune";
+       
 
         public EmployeeController()
         {
@@ -19,13 +20,14 @@ namespace Day22_WebCoreAPI.Controllers
         [HttpGet("GetEmployeeName")]
         public string GetEmployeeName() 
         {
-            return EmployeeName;
+            return employeeService.GetEmployeeData();
+             
         }
 
-        [HttpGet("GetCityName")]
-        public string GetEmployeeCity() 
-        {
-            return EmmployeeCity;
-        }
+        //[HttpGet("GetCityName")]
+        //public string GetEmployeeCity() 
+        //{
+        //    return EmmployeeCity;
+        //}
     }
 }
