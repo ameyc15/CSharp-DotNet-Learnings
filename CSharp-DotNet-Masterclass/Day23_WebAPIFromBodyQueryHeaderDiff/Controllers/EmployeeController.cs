@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Day23_WebAPIFromBodyQueryHeaderDiff.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +24,14 @@ namespace Day23_WebAPIFromBodyQueryHeaderDiff.Controllers
         {
             var result = company;
             return Ok(result);
+        }
+
+        [HttpPost("CreateEmployee")]
+        public IActionResult CreateEmployee([FromBody] CreateEmployeeRequest createEmployeeRequest)
+        {
+            Console.WriteLine("----------------------CreateEmployee Method with employee name " + createEmployeeRequest.EmployeeName);
+
+            return CreatedAtAction(nameof(CreateEmployee),createEmployeeRequest);
         }
     }
 }
