@@ -31,9 +31,28 @@ namespace Day23_WebAPIFromBodyQueryHeaderDiff.Controllers
         public IActionResult CreateEmployee([FromBody] CreateEmployeeRequest createEmployeeRequest)
         {
             Console.WriteLine("----------------------CreateEmployee Method with employee name " + createEmployeeRequest.EmployeeName);
+            // Serialization : Is a process to convert the c# object to data format which is transferable over the http req 
+            // like json or XML
             string response = JsonSerializer.Serialize(createEmployeeRequest);
             Console.WriteLine("__________Serilaised Object : " + response);
-            return CreatedAtAction(nameof(CreateEmployee),createEmployeeRequest);
+            return CreatedAtAction(nameof(CreateEmployee), createEmployeeRequest);
         }
+        [HttpGet("GetEmployeeById)/{id}")]
+        public IActionResult GetEmployeeById([FromRoute] int id)
+        {
+            Console.WriteLine("GetEmplpoyeeById called with Id " + id);
+            return Ok();
+        }
+        [HttpPost("CreateEmployees")]
+        public IActionResult CreateEmployees([FromForm] int id, [FromForm] int age)
+        {
+            Console.WriteLine("create Employee called with Id and Age" + id + age);
+            return Ok();
+        }
+
+
     }
+       
+
 }
+
