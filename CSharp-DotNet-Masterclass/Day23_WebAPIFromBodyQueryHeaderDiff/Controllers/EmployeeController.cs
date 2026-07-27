@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace Day23_WebAPIFromBodyQueryHeaderDiff.Controllers
 {
@@ -30,7 +31,8 @@ namespace Day23_WebAPIFromBodyQueryHeaderDiff.Controllers
         public IActionResult CreateEmployee([FromBody] CreateEmployeeRequest createEmployeeRequest)
         {
             Console.WriteLine("----------------------CreateEmployee Method with employee name " + createEmployeeRequest.EmployeeName);
-
+            string response = JsonSerializer.Serialize(createEmployeeRequest);
+            Console.WriteLine("__________Serilaised Object : " + response);
             return CreatedAtAction(nameof(CreateEmployee),createEmployeeRequest);
         }
     }
