@@ -1,0 +1,6 @@
+@Day24_WebAPIPracticeExamples_HostAddress = http://localhost:5070
+
+GET {{Day24_WebAPIPracticeExamples_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

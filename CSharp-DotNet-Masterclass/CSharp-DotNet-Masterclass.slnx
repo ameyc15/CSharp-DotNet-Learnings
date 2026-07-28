@@ -20,5 +20,6 @@
   <Project Path="Day21_AbstractClassSOLIDPrinicples/Day21_AbstractClassSOLIDPrinicples.csproj" Id="93c75d80-2a6d-4f6a-91fc-60df1134d2ad" />
   <Project Path="Day22_WebCoreAPI/Day22_WebCoreAPI.csproj" Id="b5d66c86-b410-4127-8a78-8eceac641b32" />
   <Project Path="Day23_WebAPIFromBodyQueryHeaderDiff/Day23_WebAPIFromBodyQueryHeaderDiff.csproj" Id="4215d1b8-7ef7-4889-9a1e-8a7eb2a7fddf" />
+  <Project Path="Day24_WebAPIPracticeExamples/Day24_WebAPIPracticeExamples.csproj" Id="9e13c2dc-3bc1-4d93-9080-e64cc230f678" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
