@@ -5,6 +5,19 @@ namespace Day26_TaskAsyncAwait
 {
     internal class Program
     {
+        // Notes : 
+        // Task : Represents a asynchronous operation that runs in the background and may complete in future
+        // A Task is like a promise that some work will finish later.
+
+        // 1. It can run without blocking the current thread
+        // 2. It can succeed, fail or can be cancelled.
+        // 3. It return result Task<T>
+
+        // Types of Task Returning Value
+        // Task         : Asynch work with no return value
+        // Task<T>      : Async work that returns a value
+        // ValueTask<T> : Optimised version for higher performance 
+
         static async Task Main(string[] args)
         {
 
