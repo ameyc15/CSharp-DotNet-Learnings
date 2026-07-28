@@ -22,5 +22,6 @@
   <Project Path="Day23_WebAPIFromBodyQueryHeaderDiff/Day23_WebAPIFromBodyQueryHeaderDiff.csproj" Id="4215d1b8-7ef7-4889-9a1e-8a7eb2a7fddf" />
   <Project Path="Day24_WebAPIPracticeExamples/Day24_WebAPIPracticeExamples.csproj" Id="9e13c2dc-3bc1-4d93-9080-e64cc230f678" />
   <Project Path="Day25_GarbageCollectionDemo/Day25_GarbageCollectionDemo.csproj" Id="d9ef39f3-0bb3-4206-891c-008f27719b80" />
+  <Project Path="Day26_TaskAsyncAwait/Day26_TaskAsyncAwait.csproj" Id="49d5f2bf-434a-4cec-b5cd-8e7bc5646156" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
