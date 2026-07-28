@@ -21,5 +21,6 @@
   <Project Path="Day22_WebCoreAPI/Day22_WebCoreAPI.csproj" Id="b5d66c86-b410-4127-8a78-8eceac641b32" />
   <Project Path="Day23_WebAPIFromBodyQueryHeaderDiff/Day23_WebAPIFromBodyQueryHeaderDiff.csproj" Id="4215d1b8-7ef7-4889-9a1e-8a7eb2a7fddf" />
   <Project Path="Day24_WebAPIPracticeExamples/Day24_WebAPIPracticeExamples.csproj" Id="9e13c2dc-3bc1-4d93-9080-e64cc230f678" />
+  <Project Path="Day25_GarbageCollectionDemo/Day25_GarbageCollectionDemo.csproj" Id="d9ef39f3-0bb3-4206-891c-008f27719b80" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
