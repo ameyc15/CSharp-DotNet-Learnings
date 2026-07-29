@@ -19,6 +19,17 @@ namespace Day26_TaskAsyncAwait
 
         // ValueTask<T> : Optimised version for higher performance 
 
+        // Task Lifecycle :
+        // Task Created : Created
+        // Task Running : Execution On Going
+        // Task Completed : Finished Successfully
+        // Task Faulted : Exception Occured 
+        // Task Cancelled : Task can be cancelled from client using cancellation token 
+
+        // Task is abstraction in .net that used to represent async operation that run in background 
+        // without blocking the calling thread.
+        // It may or may not return result/ exception
+
         static async Task Main(string[] args)
         {
 
