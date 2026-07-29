@@ -32,10 +32,6 @@ namespace Day26_TaskAsyncAwait
             int[] allTasks = await Task.WhenAll(task1, task2); // when all the tasks are completed 
             Console.WriteLine(allTasks[0]);
             Console.WriteLine(allTasks[1]);
-
-
-
-
         }
         static async Task<int> LongProcess()
         {
