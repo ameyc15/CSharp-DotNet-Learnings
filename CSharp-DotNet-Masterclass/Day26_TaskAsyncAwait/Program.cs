@@ -16,6 +16,7 @@ namespace Day26_TaskAsyncAwait
         // Types of Task Returning Value
         // Task         : Asynch work with no return value
         // Task<T>      : Async work that returns a value
+
         // ValueTask<T> : Optimised version for higher performance 
 
         static async Task Main(string[] args)
@@ -25,6 +26,14 @@ namespace Day26_TaskAsyncAwait
             ShortProcess();
 
             int value = await result;
+            // Task async work with no return value
+            Task<int> task1 = DoWorkAsync();
+            Task<int> task2 = GetDataAsync();
+            int[] allTasks = await Task.WhenAll(task1, task2); // when all the tasks are completed 
+            Console.WriteLine(allTasks[0]);
+            Console.WriteLine(allTasks[1]);
+
+
 
 
         }
@@ -42,5 +51,24 @@ namespace Day26_TaskAsyncAwait
 
             Console.WriteLine("ShortProcess Ended ...");
         }
+        public static async Task<int> DoWorkAsync()
+        {
+            Console.WriteLine("DoWorkAsync Started");
+
+            await Task.Delay(3000);
+            Console.WriteLine("DoWorkAsync Started");
+            return 300;
+           
+        }
+        public static async Task<int> GetDataAsync()
+        {
+            Console.WriteLine("GetDataAsync Started");
+            await Task.Delay(5000);
+            Console.WriteLine("GetDataAsync Finished");
+
+            return 500;
+        }
+
+
     }
 }
