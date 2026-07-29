@@ -32,6 +32,9 @@ namespace Day26_TaskAsyncAwait
             int[] allTasks = await Task.WhenAll(task1, task2); // when all the tasks are completed 
             Console.WriteLine(allTasks[0]);
             Console.WriteLine(allTasks[1]);
+            // Arrow function or Lambda function 
+            int sumofNum = await CalculateAsync();
+            Console.WriteLine(sumofNum);
         }
         static async Task<int> LongProcess()
         {
@@ -63,6 +66,18 @@ namespace Day26_TaskAsyncAwait
             Console.WriteLine("GetDataAsync Finished");
 
             return 500;
+        }
+        static async Task<int> CalculateAsync()
+        {
+            return await Task.Run(() =>
+            {
+                int sum = 0;
+                for(int i=0; i<100; i++)
+                {
+                    sum += i;
+                }
+                return sum;
+            });
         }
 
 
