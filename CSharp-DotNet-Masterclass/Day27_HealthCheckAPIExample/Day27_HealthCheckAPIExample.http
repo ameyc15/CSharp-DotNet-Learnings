@@ -1,0 +1,6 @@
+@Day27_HealthCheckAPIExample_HostAddress = http://localhost:5108
+
+GET {{Day27_HealthCheckAPIExample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

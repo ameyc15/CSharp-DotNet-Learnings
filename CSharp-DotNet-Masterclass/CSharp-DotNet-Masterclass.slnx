@@ -23,5 +23,6 @@
   <Project Path="Day24_WebAPIPracticeExamples/Day24_WebAPIPracticeExamples.csproj" Id="9e13c2dc-3bc1-4d93-9080-e64cc230f678" />
   <Project Path="Day25_GarbageCollectionDemo/Day25_GarbageCollectionDemo.csproj" Id="d9ef39f3-0bb3-4206-891c-008f27719b80" />
   <Project Path="Day26_TaskAsyncAwait/Day26_TaskAsyncAwait.csproj" Id="49d5f2bf-434a-4cec-b5cd-8e7bc5646156" />
+  <Project Path="Day27_HealthCheckAPIExample/Day27_HealthCheckAPIExample.csproj" Id="140952e9-c16f-4a28-8cab-27aefb26920b" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
