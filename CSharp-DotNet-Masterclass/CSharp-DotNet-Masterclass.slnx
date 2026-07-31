@@ -25,5 +25,6 @@
   <Project Path="Day26_TaskAsyncAwait/Day26_TaskAsyncAwait.csproj" Id="49d5f2bf-434a-4cec-b5cd-8e7bc5646156" />
   <Project Path="Day27_HealthCheckAPIExample/Day27_HealthCheckAPIExample.csproj" Id="140952e9-c16f-4a28-8cab-27aefb26920b" />
   <Project Path="Day28_DependencyInjection/Day28_DependencyInjection.csproj" Id="13d2cacb-dcb6-4f18-9881-c508977275f4" />
+  <Project Path="Day29_DIConsoleApp/Day29_DIConsoleApp.csproj" Id="5986c199-b9bc-4566-ab24-8a3f8037a05b" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>

@@ -20,6 +20,22 @@ namespace Day28_DependencyInjection
             builder.Services.AddScoped<UserManager>();
             builder.Services.AddScoped<EmployeeManager>();
             builder.Services.AddSingleton<IProductService, ProductService>();
+            // now currently IProductService has only one implementation by ProductService
+            // Let's have multiple ServiceImplmentation of Interface IProductService so that we understand loose coupling
+            // now we have 3 implementation of IProductService : ElectronicsProducts, FurnitureProducts, ProductService
+            builder.Services.AddScoped<IProductService, ElectronicsProduct>();
+            // now we can change the behavior of the GetAllProducts Method using above line depending upon what we want
+            // we can also use conditional dependency injection
+            if(DateTime.Now.DayOfWeek.ToString() == "Monday")
+            {
+                builder.Services.AddScoped<IProductService, ElectronicsProduct>(); 
+            }
+            else if (DateTime.Now.DayOfWeek.ToString() == "Friday")
+            {
+                builder.Services.AddScoped<IProductService, FurnitureProduct>();
+            }
+            // if use multiple implementation of Interface but then at run time the last implementation will be used
+            // we can use factory pattern there to decide run time which implementation to be used
 
             // IServiceCollection is the interface and ServiceClass has it's implementation
             // Dependency Injection is registered here on the basis of type depending upon the lifecycle management of 
