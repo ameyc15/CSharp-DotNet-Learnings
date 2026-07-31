@@ -1,4 +1,6 @@
 
+using Day28_DependencyInjection.Managers;
+
 namespace Day28_DependencyInjection
 {
     public class Program
@@ -13,6 +15,7 @@ namespace Day28_DependencyInjection
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<UserManager>();
 
             var app = builder.Build();
 

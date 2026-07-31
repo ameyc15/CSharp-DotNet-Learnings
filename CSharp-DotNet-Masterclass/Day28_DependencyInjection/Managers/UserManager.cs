@@ -9,7 +9,7 @@ namespace Day28_DependencyInjection.Managers
         public void CreateUser()
         {
             // will invoke repository method
-            UserReposiotry userReposiotry = new UserReposiotry();
+            UserReposiotry userReposiotry = new UserReposiotry(); //very bad way to access methods in other layer / services/ class
             userReposiotry.AddUser();
         }
 
