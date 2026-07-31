@@ -26,6 +26,11 @@ namespace Day28_DependencyInjection
             // 2. Scopeed : new object for every http request
             // 3. Transient : fresh instance is created everytime it's requested 
 
+            // usage : 
+            // 1. singleton : caching, logging
+            // 2. scoped : database connection
+            // 3. lightweight stateless service, multi-threading, file upload in chunks
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
