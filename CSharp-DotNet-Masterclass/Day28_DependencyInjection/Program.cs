@@ -1,5 +1,6 @@
 
 using Day28_DependencyInjection.Managers;
+using Day28_DependencyInjection.Services;
 
 namespace Day28_DependencyInjection
 {
@@ -18,6 +19,7 @@ namespace Day28_DependencyInjection
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<UserManager>();
             builder.Services.AddScoped<EmployeeManager>();
+            builder.Services.AddSingleton<IProductService, ProductService>();
 
             // IServiceCollection is the interface and ServiceClass has it's implementation
             // Dependency Injection is registered here on the basis of type depending upon the lifecycle management of 
