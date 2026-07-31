@@ -10,12 +10,21 @@ namespace Day28_DependencyInjection
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<UserManager>();
+            builder.Services.AddScoped<EmployeeManager>();
+
+            // IServiceCollection is the interface and ServiceClass has it's implementation
+            // Dependency Injection is registered here on the basis of type depending upon the lifecycle management of 
+            // objects 
+            // 1. Singleton : one object throughout the lifetime of application
+            // 2. Scopeed : new object for every http request
+            // 3. Transient : fresh instance is created everytime it's requested 
 
             var app = builder.Build();
 
