@@ -13,7 +13,14 @@
                 new Student() {Age = 25, StudentName = "Vinit"}
             };
 
-            // 
+            // if I want to fetch the students whose age is between 18 to 25 without using LINQ
+            foreach (Student s in students)
+            {
+                if(s.Age >= 18 && s.Age <= 25)
+                {
+                    Console.WriteLine($"Student Name : {s.StudentName.ToString()} and Age :  {s.Age.ToString()}" );
+                }
+            }
         }
     }
 }
