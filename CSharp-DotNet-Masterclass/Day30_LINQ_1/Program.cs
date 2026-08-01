@@ -21,6 +21,7 @@
                     Console.WriteLine($"Student Name : {s.StudentName.ToString()} and Age :  {s.Age.ToString()}" );
                 }
             }
+            // now using LINQ
         }
     }
 }
