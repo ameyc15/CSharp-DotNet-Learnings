@@ -17,14 +17,14 @@
             };
 
             // if I want to fetch the students whose age is between 15 to 25 without using LINQ
+            Console.WriteLine("---------------------USING IF AND FOR LOOPS--------------------");
             Student[] filteredStudents = new Student[10];
             int i = 0;
             foreach (Student s in students)
             {
 
                 if(s.Age >= 18 && s.Age <= 25)
-                {
-                    Console.WriteLine($"Student Name : {s.StudentName.ToString()} and Age :  {s.Age.ToString()}" );
+                {                    
                     filteredStudents[i] = s;
                     i++;
                 }
@@ -37,6 +37,17 @@
                 }
             }
             // now using LINQ
+
+            Console.WriteLine("****************************************");
+            Console.WriteLine("****************USING LINQ************************");
+            Student[] outputStudents = students.Where(s => s.Age>=15 && s.Age <=25).ToArray();
+            foreach(Student s in outputStudents)
+            {
+                if (s != null)
+                {
+                    Console.WriteLine($"Student Name :{s.StudentName} AND Age : {s.Age}");
+                }
+            }
         }
     }
 }
