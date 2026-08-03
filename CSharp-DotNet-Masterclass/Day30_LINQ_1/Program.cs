@@ -37,10 +37,13 @@
                 }
             }
             // now using LINQ
-
+            // First Question
             Console.WriteLine("****************************************");
             Console.WriteLine("****************USING LINQ************************");
+
             Student[] outputStudents = students.Where(s => s.Age>=15 && s.Age <=25).ToArray();
+
+
             foreach(Student s in outputStudents)
             {
                 if (s != null)
@@ -48,6 +51,24 @@
                     Console.WriteLine($"Student Name :{s.StudentName} AND Age : {s.Age}");
                 }
             }
+            // Second Question :  List of Students whose name starts with 'S'
+            Console.WriteLine("***********************Second Question*****************");
+            List<Student> nameFilter = students.Where(s => s.StudentName.StartsWith("S")).ToList();
+            foreach(Student s in nameFilter)
+            {
+                Console.WriteLine($" Name : {s.StudentName} Age: {s.Age}");
+            }
+            //Notes : 
+            // Query Syntax
+            // Define the Source : from ... in ...
+            // Create Query      : where ...
+            // Execute the Query : select ...
+            int[] numbers = { 12, 67, 89, 91, 34, 2, 9, 17 };
+            var num = from n in numbers
+                      where n > 50
+                      select n;
+            Console.WriteLine(string.Join(",",num));
+
         }
     }
 }
