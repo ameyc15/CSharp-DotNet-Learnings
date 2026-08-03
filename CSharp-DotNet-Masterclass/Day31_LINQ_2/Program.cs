@@ -90,7 +90,29 @@
                                select e.Salary).Sum();
             Console.WriteLine("Sum of salaries of all employees : " + sumSalaries);
 
-            //****************************8
+            //****************************Find the Citiwise average Salary *****************
+            // just grouping by on the basis of city
+            var citywise = (from e in employees
+                            group e by e.City into grp
+                            select grp);
+            foreach (var grp in citywise)
+            {
+                Console.WriteLine(grp.Key);
+                foreach (var e in grp)
+                {
+                    Console.WriteLine($"{e.Name}  with salary {e.Salary}");
+                }
+
+            }
+
+            // now averagge salary as well 
+            var avgSal = (from e in employees
+                          group e by e.City into grp
+                          select (grp.Key,grp.Average(x =>x.Salary)));
+            foreach (var item in avgSal)
+            {
+                Console.WriteLine($"{item.Key}  {item.Item2}");
+            }
         }
     }
 }
