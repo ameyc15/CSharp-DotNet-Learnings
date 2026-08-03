@@ -74,6 +74,28 @@
                           select n;
             Console.WriteLine(string.Join(",", evenNum));
 
+            // Find the strngs which has tutorial world in it
+            List<String> domainList = new List<string>()
+            {
+                "Java Tutorials",
+                "Data Science Masterclass",
+                "MVC Lectures",
+                "C# Tutorials",
+                ".Net Core Tutorials"
+            };
+            
+             var tutorials =  from t in domainList
+                where t.Contains("Tutorial")
+                select t;
+            Console.WriteLine(string.Join(",",tutorials));
+
+            // find the friends who has 'a' in their names
+            string[] friendnames = { "Amey", "Mikhail", "Adam", "David", "Bobby", "Christopher" };
+            var friends  = from friend in friendnames
+                           where friend.ToLower().Contains("a")
+                           select friend;
+
+            Console.WriteLine(string.Join("," , friends));
         }
     }
 }
