@@ -27,5 +27,6 @@
   <Project Path="Day28_DependencyInjection/Day28_DependencyInjection.csproj" Id="13d2cacb-dcb6-4f18-9881-c508977275f4" />
   <Project Path="Day29_DIConsoleApp/Day29_DIConsoleApp.csproj" Id="5986c199-b9bc-4566-ab24-8a3f8037a05b" />
   <Project Path="Day30_LINQ_1/Day30_LINQ_1.csproj" Id="b94ebb04-7380-46d3-b5a9-2dd7d49935c2" />
+  <Project Path="Day31_LINQ_2/Day31_LINQ_2.csproj" Id="36524d54-8dfb-4a43-9ad4-fc6071087d80" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
