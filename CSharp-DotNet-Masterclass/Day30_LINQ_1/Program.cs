@@ -68,6 +68,11 @@
                       where n > 50
                       select n;
             Console.WriteLine(string.Join(",",num));
+            // Find out even numbers in array
+            var evenNum = from n in numbers
+                          where n%2==0
+                          select n;
+            Console.WriteLine(string.Join(",", evenNum));
 
         }
     }
