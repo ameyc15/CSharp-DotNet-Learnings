@@ -84,6 +84,24 @@
                 Console.WriteLine(item.Salary  + item.Name) ;
             }
 
+
+            // Get the highest salary in every department
+            var result6 = employees                          
+                          .GroupBy(e => e.Department)
+                          
+                          .Select(
+                                g => new
+                                {
+                                    Department = g.Key,
+                                    HighestSalary = g.Max(g=>g.Salary)
+                                }
+                            );
+            foreach (var item in result6)
+            {
+                Console.WriteLine(item.Department    +  item.HighestSalary) ;
+            }
+
+
         }
     }
 }
