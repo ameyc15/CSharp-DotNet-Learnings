@@ -57,5 +57,54 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
             return Ok(employee);
         }
 
+        [HttpGet("get-employee-by-id")]
+        public async Task<IActionResult> GetEmployeeById([FromQuery] int id)
+        {
+            if (id < 1)
+            {
+                return BadRequest("Please enter valid id");
+            }
+            try
+            {
+                string sqlQuery = "SELECT * FROM Employees WHERE ID=@Id";
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    await sqlConnection.OpenAsync();
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", id);
+                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                        {
+                            if (reader.HasRows)
+                            {
+                                await reader.ReadAsync();
+                                var employee = new Employee
+                                {
+                                    FirstName = reader.GetString(1),
+                                    LastName = reader.GetString(2),
+                                    Email = reader.GetString(3),
+                                    Salary = reader.GetDecimal(4),
+                                    IsActive = reader.GetBoolean(5),
+                                };
+                                return Ok(employee);
+                            }
+                            else
+                            {
+                                return NotFound("Employee with Id : " + id + "Not Found");
+
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Database Error While Processing" + ex.Message);
+            }
+
+        }
     }
 }
