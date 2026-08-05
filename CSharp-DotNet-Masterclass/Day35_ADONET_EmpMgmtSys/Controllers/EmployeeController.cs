@@ -26,10 +26,10 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
             {
                 string sqlQuery = "INSERT INTO Employees (FirstName,LastName,Email,Salary,IsActive) values (@FirstName,@LastName,@Email,@Salary,@IsActive)";
 
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString)) 
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
                     await sqlConnection.OpenAsync();
-                    using (SqlCommand cmd = new SqlCommand(sqlQuery,sqlConnection))
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
                     {
                         cmd.Parameters.AddWithValue("@FirstName", employee.FirstName);
                         cmd.Parameters.AddWithValue("@LastName", employee.LastName);
@@ -37,19 +37,16 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
                         cmd.Parameters.AddWithValue("@Salary", employee.Salary);
                         cmd.Parameters.AddWithValue("@IsActive", employee.IsActive);
 
-                       int rowsAffected= await cmd.ExecuteNonQueryAsync();
+                        int rowsAffected = await cmd.ExecuteNonQueryAsync();
                         await sqlConnection.CloseAsync();
 
-                        if(rowsAffected < 1)
+                        if (rowsAffected < 1)
                         {
                             Console.WriteLine("data insertion failed");
                             return StatusCode(500, "Error Occured");
                         }
                     }
-
-
                 }
-
             }
             catch (Exception ex)
             {
