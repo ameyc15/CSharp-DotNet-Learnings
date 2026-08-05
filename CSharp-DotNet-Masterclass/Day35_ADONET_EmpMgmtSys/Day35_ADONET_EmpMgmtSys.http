@@ -1,0 +1,6 @@
+@Day35_ADONET_EmpMgmtSys_HostAddress = http://localhost:5104
+
+GET {{Day35_ADONET_EmpMgmtSys_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
