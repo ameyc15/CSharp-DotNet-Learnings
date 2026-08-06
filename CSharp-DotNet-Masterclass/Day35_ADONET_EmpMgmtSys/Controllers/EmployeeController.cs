@@ -197,5 +197,44 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
             }
             return Ok(emp + "Updatation Success");
         }
+
+
+        [HttpDelete("delete-employee")]
+        public async Task<IActionResult> DeleteEmployee([FromQuery] int id)
+        {
+            if (id < 1)
+            {
+                return BadRequest("Please enter valid Id");
+            }
+
+            try
+            {
+                string sqlQuery = "UPDATE Employees SET IsActive=0 WHERE Id = @Id";
+
+                using(SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    await sqlConnection.OpenAsync();
+                    using(SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", id);
+                        int rowsAffected = await cmd.ExecuteNonQueryAsync();
+
+                        if (rowsAffected < 1)
+                        {
+                            return StatusCode(500, "Error Occured");
+                        }
+                    }
+                    await sqlConnection.CloseAsync() ;                  
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, "Deletion Failed" + ex.Message);
+            }
+
+            return Ok("Employee Deleted Successfully");
+        }
     }
 }
