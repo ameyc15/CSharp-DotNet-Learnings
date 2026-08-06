@@ -106,5 +106,52 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
             }
 
         }
+        [HttpGet("Get-all-employees")]
+        public async Task<IActionResult> GetAllEmployees([FromQuery] int skip=0, int PageSize=2)
+        {
+            if (skip < 0 || PageSize <0) 
+            {
+                return BadRequest();
+            }
+            string sqlQuery = "SELECT * FROM Employees ORDER BY Id OFFSET @Skip ROWS FETCH NEXT @PageSize ROWS ONLY";
+            List<Employee> employees = new List<Employee>();
+
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                   await sqlConnection.OpenAsync();
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@Skip", skip);
+                        cmd.Parameters.AddWithValue("@PageSize", PageSize);
+
+                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+
+                            while (await reader.ReadAsync())
+                            {
+                                Employee e = new Employee()
+                                {
+                                    FirstName = reader.GetString(1),
+                                    LastName = reader.GetString(2),
+                                    Email = reader.GetString(3),
+                                    Salary = reader.GetDecimal(4),
+                                    IsActive = reader.GetBoolean(5),
+                                };
+                                employees.Add(e);
+                            }
+                    }
+                    sqlConnection.CloseAsync();
+                }
+                return Ok(employees);
+            }
+            catch (Exception ex) 
+            {
+                return StatusCode(500, ex.Message);
+            }
+            
+
+        }
     }
 }
