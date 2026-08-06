@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
+using System.Runtime.CompilerServices;
 
 namespace Day35_ADONET_EmpMgmtSys.Controllers
 {
@@ -152,6 +153,49 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
             }
             
 
+        }
+
+        [HttpPut("update-employee")]
+        public async Task<IActionResult> UpdateEmployee([FromQuery] int id,[FromBody] Employee emp)
+        {
+            if(id < 1)
+            {
+                return BadRequest("Please enter valid employee id ");
+            }
+            string sqlQuery = "UPDATE Employees SET FirstName=@FirstName,LastName = @LastName, Email=@Email, Salary=@Salary,IsActive=@IsActive WHERE Id=@id";
+            try
+            {
+                using(SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    await sqlConnection.OpenAsync();
+
+                    using(SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", id);
+                        cmd.Parameters.AddWithValue("@FirstName",emp.FirstName);
+                        cmd.Parameters.AddWithValue("@LastName", emp.LastName);
+                        cmd.Parameters.AddWithValue("@Email", emp.Email);
+                        cmd.Parameters.AddWithValue("@Salary", emp.Salary);
+                        cmd.Parameters.AddWithValue("@IsActive", emp.IsActive);
+
+                        int rowAffected = await cmd.ExecuteNonQueryAsync();
+
+                        if(rowAffected < 1)
+                        {
+                            return StatusCode(500, "Error Occured");
+                        }
+                    }
+
+                    await sqlConnection.CloseAsync() ;
+                }
+
+
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, "Updation Failed");
+            }
+            return Ok(emp + "Updatation Success");
         }
     }
 }
