@@ -108,9 +108,9 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
 
         }
         [HttpGet("Get-all-employees")]
-        public async Task<IActionResult> GetAllEmployees([FromQuery] int skip=0, int PageSize=2)
+        public async Task<IActionResult> GetAllEmployees([FromQuery] int skip = 0, int PageSize = 2)
         {
-            if (skip < 0 || PageSize <0) 
+            if (skip < 0 || PageSize < 0)
             {
                 return BadRequest();
             }
@@ -122,7 +122,7 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                   await sqlConnection.OpenAsync();
+                    await sqlConnection.OpenAsync();
                     using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
                     {
                         cmd.Parameters.AddWithValue("@Skip", skip);
@@ -147,32 +147,32 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
                 }
                 return Ok(employees);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }
-            
+
 
         }
 
         [HttpPut("update-employee")]
-        public async Task<IActionResult> UpdateEmployee([FromQuery] int id,[FromBody] Employee emp)
+        public async Task<IActionResult> UpdateEmployee([FromQuery] int id, [FromBody] Employee emp)
         {
-            if(id < 1)
+            if (id < 1)
             {
                 return BadRequest("Please enter valid employee id ");
             }
             string sqlQuery = "UPDATE Employees SET FirstName=@FirstName,LastName = @LastName, Email=@Email, Salary=@Salary,IsActive=@IsActive WHERE Id=@id";
             try
             {
-                using(SqlConnection sqlConnection = new SqlConnection(connectionString))
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
                     await sqlConnection.OpenAsync();
 
-                    using(SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
                     {
                         cmd.Parameters.AddWithValue("@Id", id);
-                        cmd.Parameters.AddWithValue("@FirstName",emp.FirstName);
+                        cmd.Parameters.AddWithValue("@FirstName", emp.FirstName);
                         cmd.Parameters.AddWithValue("@LastName", emp.LastName);
                         cmd.Parameters.AddWithValue("@Email", emp.Email);
                         cmd.Parameters.AddWithValue("@Salary", emp.Salary);
@@ -180,18 +180,16 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
 
                         int rowAffected = await cmd.ExecuteNonQueryAsync();
 
-                        if(rowAffected < 1)
+                        if (rowAffected < 1)
                         {
                             return StatusCode(500, "Error Occured");
                         }
                     }
 
-                    await sqlConnection.CloseAsync() ;
+                    await sqlConnection.CloseAsync();
                 }
-
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, "Updation Failed");
             }
@@ -211,10 +209,10 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
             {
                 string sqlQuery = "UPDATE Employees SET IsActive=0 WHERE Id = @Id";
 
-                using(SqlConnection sqlConnection = new SqlConnection(connectionString))
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
                     await sqlConnection.OpenAsync();
-                    using(SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection))
                     {
                         cmd.Parameters.AddWithValue("@Id", id);
                         int rowsAffected = await cmd.ExecuteNonQueryAsync();
@@ -224,12 +222,10 @@ namespace Day35_ADONET_EmpMgmtSys.Controllers
                             return StatusCode(500, "Error Occured");
                         }
                     }
-                    await sqlConnection.CloseAsync() ;                  
-
+                    await sqlConnection.CloseAsync();
                 }
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, "Deletion Failed" + ex.Message);
             }
