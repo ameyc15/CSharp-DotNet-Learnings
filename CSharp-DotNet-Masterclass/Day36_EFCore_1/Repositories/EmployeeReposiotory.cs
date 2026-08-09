@@ -2,6 +2,9 @@
 {
     public class EmployeeReposiotory
     {
+        public EmployeeReposiotory() 
+        {
 
+        }
     }
 }
