@@ -32,5 +32,6 @@
   <Project Path="Day32_LINQ_Practice/Day33_LINQ_Practice.csproj" Id="defdc6b2-c8d8-43c6-9eb4-106f6abe0f56" />
   <Project Path="Day34_DbConnectivity/Day34_DbConnectivity.csproj" Id="ea47719d-cd6f-4983-9261-a3df32156645" />
   <Project Path="Day35_ADONET_EmpMgmtSys/Day35_ADONET_EmpMgmtSys.csproj" Id="57c48d6d-0328-4933-bb5d-4f83cefd82c8" />
+  <Project Path="Day36_EFCore_1/Day36_EFCore_1.csproj" Id="d98156c8-e0e8-4806-9892-df8f5efabf09" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
