@@ -1,4 +1,6 @@
 
+using Day36_EFCore_1.Services;
+
 namespace Day36_EFCore_1
 {
     public class Program
@@ -14,7 +16,7 @@ namespace Day36_EFCore_1
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<Employee>();
+            builder.Services.AddScoped<EmployeeService>();
 
             var app = builder.Build();
 

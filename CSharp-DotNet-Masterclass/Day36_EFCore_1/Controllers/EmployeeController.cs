@@ -8,10 +8,10 @@ namespace Day36_EFCore_1.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private readonly EmployeeService employeeService;
-        public EmployeeController() 
+        private readonly EmployeeService _employeeService;
+        public EmployeeController(EmployeeService employeeService) 
         {
-
+            _employeeService = employeeService;
         }
         // Get : api/employee/all
         [HttpGet("get-all-employees")]
