@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Day36_EFCore_1.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Day36_EFCore_1.Controllers
@@ -7,6 +8,7 @@ namespace Day36_EFCore_1.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
+        private readonly EmployeeService employeeService;
         public EmployeeController() 
         {
 

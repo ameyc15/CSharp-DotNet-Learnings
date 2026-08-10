@@ -14,6 +14,8 @@ namespace Day36_EFCore_1
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddScoped<Employee>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
