@@ -30,6 +30,9 @@ namespace Day36_EFCore_1.Models
 
         public bool IsActive { get; set; }
 
+        [Column("Emp_Address")]
+        public string Address { get; set; }
+
         [NotMapped]
         public string MobileNumber { get; set; }
     }
