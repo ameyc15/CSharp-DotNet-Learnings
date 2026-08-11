@@ -28,7 +28,7 @@ namespace Day36_EFCore_1.Repositories
             _appDbContext.SaveChangesAsync();
         }
 
-        public async Task DeleteEmployeeByIdAsync(int id)
+        public async Task DeleteByIdAsync(int id)
         {
             var emp = await _appDbContext.Employees.FindAsync(id);
 
@@ -39,7 +39,7 @@ namespace Day36_EFCore_1.Repositories
             }
         }
 
-        public async Task Update(Employee employee)
+        public async Task UpdateAsync(Employee employee)
         {
             _appDbContext.Employees.Update(employee);
             await _appDbContext.SaveChangesAsync();

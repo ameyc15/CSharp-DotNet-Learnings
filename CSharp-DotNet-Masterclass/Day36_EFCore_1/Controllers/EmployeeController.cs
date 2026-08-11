@@ -1,4 +1,5 @@
-﻿using Day36_EFCore_1.Services;
+﻿using Day36_EFCore_1.Models;
+using Day36_EFCore_1.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,19 +18,41 @@ namespace Day36_EFCore_1.Controllers
         [HttpGet("get-all-employees")]
         public  async Task<IActionResult> GetAllEmployees()
         {
-            return Ok();
+            var employees = await _employeeService.GetAllEmployeesAsync();
+            return Ok(employees);
         }
 
         [HttpGet("get-employee-by-id")]
-        public async Task<IActionResult> GetEmployeeById()
+        public async Task<IActionResult> GetEmployeeById(int id)
         {
-            return Ok();
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            if(employee == null)
+            {
+                return NotFound();
+            }
+            return Ok(employee);
         }
 
         [HttpPost("create-employee")]
-        public async Task<IActionResult> CreateEmployee()
+        public async Task<IActionResult> CreateEmployee(Employee employee)
         {
+            await _employeeService.AddEmployeeAsync(employee);
+            return Created(nameof(CreateEmployee),employee);
+        }
+
+        [HttpDelete("delete-employee")]
+        public async Task<IActionResult> DeleteEmployee(int id)
+        {
+            await _employeeService.DeleteEmployeeById(id);
+
             return Ok();
+        }
+
+        [HttpPut("update-employee")]
+        public async Task<IActionResult> UpdateEmployee(Employee employee)
+        {
+            _employeeService.UpdateEmployeeAsync(employee);
+            return Ok(employee);
         }
     }
 }

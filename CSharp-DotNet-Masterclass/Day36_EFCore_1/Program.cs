@@ -1,5 +1,6 @@
-
+using Day36_EFCore_1.Repositories;
 using Day36_EFCore_1.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace Day36_EFCore_1
 {
@@ -16,6 +17,8 @@ namespace Day36_EFCore_1
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddScoped<AppDbContext>();
+            builder.Services.AddScoped<EmployeeReposiotory>();
             builder.Services.AddScoped<EmployeeService>();
 
             var app = builder.Build();
