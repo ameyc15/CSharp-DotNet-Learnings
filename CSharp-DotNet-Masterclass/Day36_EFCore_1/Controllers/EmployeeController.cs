@@ -51,7 +51,7 @@ namespace Day36_EFCore_1.Controllers
         [HttpPut("update-employee")]
         public async Task<IActionResult> UpdateEmployee(Employee employee)
         {
-            _employeeService.UpdateEmployeeAsync(employee);
+            await _employeeService.UpdateEmployeeAsync(employee);
             return Ok(employee);
         }
     }

@@ -24,8 +24,8 @@ namespace Day36_EFCore_1.Repositories
 
         public async Task AddAsync(Employee employee)
         {
-            _appDbContext.Employees.Add(employee);
-            _appDbContext.SaveChangesAsync();
+           await _appDbContext.Employees.AddAsync(employee);
+           await _appDbContext.SaveChangesAsync();
         }
 
         public async Task DeleteByIdAsync(int id)
