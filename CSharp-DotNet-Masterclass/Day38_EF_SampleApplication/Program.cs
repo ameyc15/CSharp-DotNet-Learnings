@@ -1,5 +1,6 @@
 
 using Day38_EF_SampleApplication.Data;
+using Day38_EF_SampleApplication.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace Day38_EF_SampleApplication
@@ -18,7 +19,7 @@ namespace Day38_EF_SampleApplication
             builder.Services.AddDbContext<AppDbContext> (options => options.UseSqlServer(connectionString));
 
             // Add services to the container.
-
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
