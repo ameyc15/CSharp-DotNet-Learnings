@@ -1,0 +1,6 @@
+@Day38_EF_SampleApplication_HostAddress = http://localhost:5073
+
+GET {{Day38_EF_SampleApplication_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
