@@ -1,4 +1,7 @@
 
+using Day38_EF_SampleApplication.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Day38_EF_SampleApplication
 {
     public class Program
@@ -6,6 +9,13 @@ namespace Day38_EF_SampleApplication
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Read Connection String from appsetting.json
+            
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            // register app db context
+            builder.Services.AddDbContext<AppDbContext> (options => options.UseSqlServer(connectionString));
 
             // Add services to the container.
 
