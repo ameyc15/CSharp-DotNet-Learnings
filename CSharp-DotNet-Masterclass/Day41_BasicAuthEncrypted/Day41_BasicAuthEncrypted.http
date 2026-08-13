@@ -1,0 +1,6 @@
+@Day41_BasicAuthEncrypted_HostAddress = http://localhost:5042
+
+GET {{Day41_BasicAuthEncrypted_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
