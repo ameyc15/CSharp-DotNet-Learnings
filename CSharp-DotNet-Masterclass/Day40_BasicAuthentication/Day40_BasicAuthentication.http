@@ -1,0 +1,6 @@
+@Day40_BasicAuthentication_HostAddress = http://localhost:5121
+
+GET {{Day40_BasicAuthentication_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

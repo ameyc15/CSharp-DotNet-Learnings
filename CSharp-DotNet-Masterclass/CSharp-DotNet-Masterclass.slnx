@@ -36,5 +36,6 @@
   <Project Path="Day37_EFCore_2/Day37_EFCore_2.csproj" Id="bf51c099-afe4-4e9e-954e-faf0cad2b849" />
   <Project Path="Day38_EF_SampleApplication/Day38_EF_SampleApplication.csproj" Id="d5a93061-05e6-4864-843b-206122d75ee0" />
   <Project Path="Day39_DbFirstApproach/Day39_DbFirstApproach.csproj" Id="f85ed522-3c83-4c97-a166-4b36071c5068" />
+  <Project Path="Day40_BasicAuthentication/Day40_BasicAuthentication.csproj" Id="a3fd6032-ed10-4833-9a2b-6226bb88b373" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
