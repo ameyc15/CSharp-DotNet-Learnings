@@ -10,6 +10,10 @@ namespace Day40_BasicAuthentication.Controllers
         [HttpGet("getemployees")]
         public IActionResult GetEmployees()
         {
+            if (!BasicAuthHelper.IsAuthorise(Request))
+            {
+                return Unauthorized("Please enter correct credentials");
+            }
             return Ok(new
             {
                 User = "Amey",
