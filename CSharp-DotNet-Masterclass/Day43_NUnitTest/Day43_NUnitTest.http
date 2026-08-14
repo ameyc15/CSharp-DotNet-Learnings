@@ -1,0 +1,6 @@
+@Day43_NUnitTest_HostAddress = http://localhost:5002
+
+GET {{Day43_NUnitTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
