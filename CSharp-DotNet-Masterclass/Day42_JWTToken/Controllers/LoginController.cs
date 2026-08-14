@@ -19,14 +19,14 @@ namespace Day42_JWTToken.Controllers
             if (username=="admin" && password=="admin123")
             {
                 var token = GenerateToken(username);
-                return Ok(); 
+                return Ok(token); 
             }
             return Unauthorized();
         }
 
         private string GenerateToken(string username)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MyScreteKey"));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("A7kP9xQ2mL5vR8tZ4cN6yH1jS3wF8bQ9"));
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var claims = new[]
             {

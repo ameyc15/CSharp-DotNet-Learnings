@@ -9,9 +9,10 @@ namespace Day42_JWTToken.Controllers
     public class DataController : ControllerBase
     {
         [Authorize]
-        [HttpGet]
+        [HttpGet("Get-data")]
         public IActionResult Get()
         {
             return Ok("Success");
         }
+    }
 }
