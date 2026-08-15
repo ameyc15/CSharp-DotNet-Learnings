@@ -19,7 +19,9 @@ namespace Day43_NUnitTest.Controllers
         [HttpGet]
         public IActionResult Add(int a, int b)
         {
-            return Ok(_calculatorService.Add(a, b));
+            var result = _calculatorService.Add(a, b);
+            Console.WriteLine(result);
+            return Ok(result);
         }
     }
 }
