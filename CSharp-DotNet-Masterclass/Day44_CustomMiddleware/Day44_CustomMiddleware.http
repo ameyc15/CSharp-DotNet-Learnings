@@ -1,0 +1,6 @@
+@Day44_CustomMiddleware_HostAddress = http://localhost:5274
+
+GET {{Day44_CustomMiddleware_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

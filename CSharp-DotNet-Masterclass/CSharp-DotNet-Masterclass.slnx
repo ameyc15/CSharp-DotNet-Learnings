@@ -43,5 +43,6 @@
     <BuildDependency Project="Day43_NUnitTest/Day43_NUnitTest.csproj" />
   </Project>
   <Project Path="Day43_NUnitTest/Day43_NUnitTest.csproj" Id="6d9c4114-8d15-404d-885c-7dd1d063e678" />
+  <Project Path="Day44_CustomMiddleware/Day44_CustomMiddleware.csproj" Id="ae382231-5a97-4aec-a984-50c73a419ef5" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
