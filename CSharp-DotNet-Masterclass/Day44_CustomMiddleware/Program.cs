@@ -26,6 +26,7 @@ namespace Day44_CustomMiddleware
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+            app.UseRequestLogging();
 
 
             app.MapControllers();
