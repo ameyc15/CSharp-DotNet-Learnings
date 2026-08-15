@@ -39,6 +39,9 @@
   <Project Path="Day40_BasicAuthentication/Day40_BasicAuthentication.csproj" Id="a3fd6032-ed10-4833-9a2b-6226bb88b373" />
   <Project Path="Day41_BasicAuthEncrypted/Day41_BasicAuthEncrypted.csproj" Id="8bb4db81-c97a-4da0-9618-84f8eefb4c02" />
   <Project Path="Day42_JWTToken/Day42_JWTToken.csproj" Id="b40705fc-9630-43a6-85f8-beb1081ffe18" />
+  <Project Path="Day43_NUnitTest.Tests/Day43_NUnitTest.Tests.csproj" Id="1a8b73c6-803b-4737-abed-5040bb98477a">
+    <BuildDependency Project="Day43_NUnitTest/Day43_NUnitTest.csproj" />
+  </Project>
   <Project Path="Day43_NUnitTest/Day43_NUnitTest.csproj" Id="6d9c4114-8d15-404d-885c-7dd1d063e678" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
