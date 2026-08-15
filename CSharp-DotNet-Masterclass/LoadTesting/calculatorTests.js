@@ -10,11 +10,12 @@ import {sleep, check} from 'k6';
 
 export const options ={
     stages :[
-        {duration:'10s' , target : 25},
-        {duration:'15s' , target : 50},
-        {duration:'10s' , target : 0}
+        {duration:'10s' , target : 100},
+        {duration:'15s' , target : 500},
+        {duration:'10s' , target : 10}
     ]
 }
+
 
 export default function () {
     let url = 'https://localhost:7078/api/Calculator?a=5&b=10';
