@@ -45,5 +45,6 @@
   <Project Path="Day43_NUnitTest/Day43_NUnitTest.csproj" Id="6d9c4114-8d15-404d-885c-7dd1d063e678" />
   <Project Path="Day44_CustomMiddleware/Day44_CustomMiddleware.csproj" Id="ae382231-5a97-4aec-a984-50c73a419ef5" />
   <Project Path="Day45_SwaggerDocumentation/Day45_SwaggerDocumentation.csproj" Id="c5cc6709-4e4a-4ea1-ab59-8d0ebfa9c046" />
+  <Project Path="Day46_DelegateExample/Day46_DelegateExample.csproj" Id="b852c07e-b6e3-4d1f-a44b-cb6bcbb58da1" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
 </Solution>
