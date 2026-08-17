@@ -1,0 +1,6 @@
+@Day47_StoredProcedure_HostAddress = http://localhost:5279
+
+GET {{Day47_StoredProcedure_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
