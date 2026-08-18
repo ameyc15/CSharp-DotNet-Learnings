@@ -14,6 +14,8 @@ namespace Day47_StoredProcedure
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddSingleton<EmployeeRepository>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
